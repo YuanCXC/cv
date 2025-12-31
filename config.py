@@ -2,8 +2,6 @@
 项目配置文件
 ================
 
-本文件包含项目中使用的所有配置参数，包括路径设置、模型配置、数据集配置等。
-通过环境变量和配置文件来管理这些参数，便于在不同环境中部署和调试。
 """
 
 import os
@@ -13,6 +11,13 @@ from dotenv import load_dotenv
 # 加载.env文件中的环境变量
 # override=True表示.env文件中的变量会覆盖系统中已存在的同名变量
 load_dotenv(override=True)
+
+# ====================
+# API配置
+# ====================
+
+# 从环境变量DASHSCOPE_API_KEY中获取，用于调用Qwen3-VL的API服务
+API_KEY = os.getenv("DASHSCOPE_API_KEY")
 
 # ====================
 # 路径配置
@@ -65,11 +70,11 @@ DEVICE = "cuda" if os.environ.get("CUDA_VISIBLE_DEVICES") else "cpu"
 # 不同类型问题的提示词模板
 # 用于指导模型回答特定类型的问题
 PROMPTS = {
-    "vqa": "请回答关于这张图片的以下问题: {question}",     # 通用VQA问题模板
-    "description": "请详细描述这张图片",                    # 图像描述任务
-    "count": "这张图片中有多少个 {object}？",               # 计数类问题模板
+    "vqa": "请回答关于这张图片的以下问题: {question}",               # 通用VQA问题模板
+    "description": "请详细描述这张图片",                           # 图像描述任务
+    "count": "这张图片中有多少个 {object}？",                      # 计数类问题模板
     "spatial": "这张图片中 {obj1} 和 {obj2} 之间的空间关系是什么？",  # 空间关系问题
-    "reading": "这张图片中能看到什么文字？"                  # 文字识别问题
+    "reading": "这张图片中能看到什么文字？"                         # 文字识别问题
 }
 
 # ====================
@@ -84,10 +89,3 @@ CLIP_RERANK = True
 # 当CLIP相似度分数低于此阈值时，会考虑替换为其他候选答案
 CLIP_THRESHOLD = 0.3
 
-# ====================
-# API配置
-# ====================
-
-# DashScope API密钥
-# 从环境变量DASHSCOPE_API_KEY中获取，用于调用Qwen3-VL的API服务
-API_KEY = os.getenv("DASHSCOPE_API_KEY")

@@ -13,9 +13,7 @@ CLIP（Contrastive Language-Image Pre-training）是一个多模态模型，
 import torch
 from PIL import Image, ImageDraw, ImageFont
 import os
-from pathlib import Path
 import json
-import matplotlib.pyplot as plt
 import numpy as np
 from transformers import AutoProcessor, AutoModelForZeroShotImageClassification
 

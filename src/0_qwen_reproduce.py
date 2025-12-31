@@ -16,11 +16,9 @@ Qwen3-VL是阿里云通义千问系列的视觉语言模型，能够理解和回
 import torch
 from PIL import Image
 import os
-from pathlib import Path
 import json
 import matplotlib.pyplot as plt
 import matplotlib
-import numpy as np
 from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
 
 from config import DATA_IMAGES, DATA_RESULTS
