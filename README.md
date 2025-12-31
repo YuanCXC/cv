@@ -2,341 +2,349 @@
 
 ## 项目概述
 
-本项目是一个基于多模态模型的视觉问答(VQA)评估系统，结合了阿里云通义千问Qwen3-VL模型的强大VQA能力和OpenAI CLIP模型的图像-文本匹配精度，实现了高精度的图像问答能力评估。
+本项目是一个基于多模态模型的视觉问答（Visual Question Answering，简称VQA）评估系统。该系统巧妙地结合了阿里云通义千问Qwen3-VL模型的强大视觉理解和推理能力，以及OpenAI CLIP模型的精确图像-文本匹配特性，实现了高精度、高可靠性的图像问答能力评估。通过双模型协同工作机制，系统能够对输入的图像提出问题并生成准确的答案，同时支持多种评估指标的计算和可视化的结果展示。
 
-### 核心亮点
+视觉问答是计算机视觉和自然语言处理交叉领域的一个重要研究方向，其目标是让机器能够理解图像内容并回答人类提出的相关问题。这项技术有着广泛的应用场景，包括辅助盲人出行、教育机器人、智能客服、医学影像分析等领域。传统的VQA方法通常依赖于单一的视觉语言模型，虽然能够完成基本的问答任务，但在答案的准确性和可靠性方面仍有较大的提升空间。本项目通过引入CLIP模型作为答案验证和重排序的辅助工具，显著提升了VQA系统的整体性能。
 
-- **多模态融合**：结合Qwen3-VL的VQA推理能力与CLIP的图像-文本相似度计算
-- **智能重排序**：通过CLIP相似度优化Qwen3-VL的答案质量
-- **消融实验**：完整对比有无CLIP重排序的效果差异
-- **多维度评估**：支持精确匹配、模糊匹配、问题分类等多种评估指标
-- **模块化设计**：公共功能提取到独立模块，便于维护和扩展
-- **中文友好**：完整的中文注释、报告和可视化结果
-- **详细可视化**：多样化的评估结果可视化和分析报告
+本系统的核心创新点在于提出了一个双阶段答案生成和优化框架。在第一阶段，Qwen3-VL模型根据图像内容和问题生成初始答案；在第二阶段，CLIP模型对生成的答案进行验证和评估，如果发现更好的候选答案，则进行答案替换。这种设计充分利用了Qwen3-VL在语义理解和推理方面的优势，以及CLIP在视觉-语言对应关系建模方面的专长，实现了两个模型的互补增强。此外，系统还提供了完整的消融实验功能，用户可以对比启用和禁用CLIP重排序两种模式下的评估结果，从而量化CLIP重排序机制对系统性能的贡献。
+
+## 核心亮点
+
+本系统在设计和实现过程中始终坚持模块化、高性能、易用性的原则，形成了以下核心亮点：
+
+**多模态融合架构**：系统采用双模型协同的设计理念，Qwen3-VL负责深度的语义理解和推理，CLIP负责答案的视觉验证和优化。这种架构使得两个模型能够各司其职，充分发挥各自的优势。Qwen3-VL作为一款优秀的视觉语言模型，能够准确理解图像内容并生成语义连贯的答案；CLIP则通过计算答案与图像之间的相似度，帮助识别和纠正不准确的答案。两个模型的协同工作显著提升了整体系统的准确性和鲁棒性。
+
+**智能答案重排序机制**：当Qwen3-VL生成初始答案后，系统会使用CLIP模型计算该答案与图像之间的相似度。如果相似度较低，说明答案可能存在问题，此时系统会从候选答案列表中选择相似度最高的答案作为最终输出。这个候选答案列表包含Qwen3-VL生成的初始答案以及数据集中标注的标准答案。通过这种机制，系统能够在保持答案语义正确性的同时，提高与标准答案的匹配度。
+
+**完整的消融实验支持**：系统提供了全面的消融实验功能，可以分别运行启用CLIP重排序和禁用CLIP重排序两种评估模式，并自动生成详细的对比分析报告。这种设计使得研究人员和开发者能够量化CLIP重排序机制对系统性能的贡献，从而更好地理解双模型协同工作的效果和价值。消融实验报告包括准确率对比、模糊匹配率对比、各问题类型的性能对比等多个维度。
+
+**多维度评估指标**：系统支持多种评估指标的计算，包括精确匹配准确率、模糊匹配准确率、各问题类型的分类准确率、CLIP优化率等。这些指标从不同角度反映了系统的性能状况，帮助用户全面了解模型的优缺点。精确匹配要求预测答案与标准答案完全一致，是最严格的评估方式；模糊匹配则允许一定程度的语义偏差，能够更好地反映答案的语义正确性。
+
+**模块化设计**：系统的核心功能被抽象到`vqa_common.py`公共模块中，包括模型初始化、数据处理、文本标准化、问题分类、推理计算、评估指标计算、可视化等关键功能。这种模块化设计使得代码易于维护和扩展，多个脚本可以共享同一套功能实现，减少了代码重复。开发者可以根据需要灵活组合这些功能模块，构建自己的VQA应用。
+
+**中文友好支持**：系统提供了完整的中文注释、中文可视化界面和中文评估报告，降低了中文用户的使用门槛。matplotlib和PIL等可视化库已配置为支持中文字体显示，确保图表中的中文标签能够正确渲染。评估报告和日志信息均使用中文表述，便于国内用户理解和使用。
+
+**详细的可视化功能**：系统提供了丰富的可视化功能，包括分类统计图表、评估结果网格图、消融实验对比图等。这些可视化图表直观地展示了模型在不同问题类型上的表现，帮助用户快速定位模型的薄弱环节。分类统计图表展示了各问题类型的样本数量和准确率；评估结果网格图随机选取成功和失败的样本进行展示；消融实验对比图则直观地展示了启用CLIP重排序前后的性能差异。
 
 ## 技术架构
 
-### 核心模型
+### 核心模型介绍
 
-| 模型 | 类型 | 功能 |
-|------|------|------|
-| Qwen3-VL-8B-Instruct | 视觉语言模型 | 强大的多模态理解和图像问答能力 |
-| CLIP ViT-B/32 | 对比学习模型 | 优秀的图像-文本相似度计算和零样本分类能力 |
+本系统使用了两个核心预训练模型，分别负责不同的任务：
 
-### 系统流程
+**Qwen3-VL-4B-Instruct**：这是阿里云通义千问团队开源的一款视觉语言模型，属于Qwen3-VL系列的一员。该模型拥有40亿参数，在大规模多模态数据上进行了预训练，具备出色的图像理解、视觉问答、多模态推理等能力。模型支持中英文双语，能够处理各种复杂类型的视觉问答任务，包括目标识别、属性判断、计数、空间关系推理、文字识别等。与较大规模的模型相比，4B版本在保持较好性能的同时大幅降低了计算资源需求，适合在消费级GPU上运行。在本系统中，Qwen3-VL主要负责接收图像和问题输入，生成语义相关的答案文本。
 
-```
-输入图像 + 问题 → Qwen3-VL API推理 → 初始答案 → CLIP相似度验证 → 最终优化答案 → 评估结果
-```
+**CLIP ViT-B/32**：这是OpenAI开源的对比语言-图像预训练模型，采用Vision Transformer架构。CLIP在超过4亿个图文对上进行了预训练，学习了强大的图像-文本对应关系表示。模型的核心思想是将图像和文本都编码到同一个向量空间，通过计算向量之间的相似度来判断图文匹配程度。这种能力使得CLIP非常适合用于零样本分类、图文检索、答案验证等任务。在本系统中，CLIP主要用于计算Qwen3-VL生成的答案与图像之间的相似度，作为答案重排序的依据。通过比较不同候选答案与图像的相似度，系统可以选择出最符合图像内容的答案。
+
+### 系统工作流程
+
+本系统的处理流程可以分为以下几个阶段：
+
+**输入处理阶段**：系统首先读取用户提供的图像文件和对应的问答数据。图像文件通常存储在`data/images/`目录下，问答元数据存储在`data/images/metadata.json`文件中。每个问答样本包含图像文件名、问题文本和标准答案列表。系统会自动检查文件是否存在，并对图像进行必要的预处理，包括格式转换、尺寸调整等。
+
+**初始答案生成阶段**：系统使用LangChain封装的ChatOpenAI接口调用Qwen3-VL的API服务。图像首先被转换为base64编码格式，然后与问题文本一起封装为多模态消息发送给模型。模型处理后返回答案文本，系统对答案进行简单的清洗和格式化处理，提取关键信息作为初始答案。
+
+**CLIP相似度计算阶段**：如果启用了CLIP重排序功能，系统会加载本地CLIP模型并计算初始答案与图像之间的相似度。候选答案列表包含初始答案和标准答案中的唯一答案（最多5个）。CLIP模型分别计算图像与各候选答案的相似度分数，通过softmax转换为概率分布。如果初始答案的概率不是最高的，系统会触发答案重排序。
+
+**答案重排序阶段**：根据CLIP相似度计算结果，系统选择概率最高的候选答案作为最终答案。同时记录是否发生了重排序以及重排序后的答案变化情况。这个过程有效地过滤掉了Qwen3-VL生成的不准确答案，提高了整体准确率。
+
+**评估计算阶段**：系统使用多种匹配策略评估预测答案与标准答案的一致性。精确匹配要求标准化后完全一致；模糊匹配允许子串关系和词汇重叠；综合准确率则综合考虑多种匹配策略给出评分。评估结果按问题类型分类统计，生成详细的分类准确率报告。
+
+**结果输出阶段**：系统将评估结果保存为多种格式的文件，包括JSON格式的完整结果、JSON格式的评估报告、TXT格式的文本摘要、PNG格式的可视化图表等。所有结果文件默认保存在`data/results/`目录下，按照不同的评估类型分门别类存储。
 
 ## 项目结构
 
 ```
-VQA/
+VL/
 ├── README.md                          # 项目说明文档
-├── config.py                          # 项目配置文件
+├── config.py                          # 项目配置文件（包含所有配置参数）
 ├── .env                               # 环境变量配置（包含API密钥等敏感信息）
 ├── src/                               # 源代码目录
+│   ├── vqa_common.py                  # 核心公共功能模块
 │   ├── 0_clip_demo.py                 # CLIP模型功能演示脚本
 │   ├── 0_qwen_reproduce.py            # Qwen3-VL模型基础推理演示
-│   ├── 1_vqa_evaluation.py            # 基于Qwen3-VL API的单一模型评估
-│   ├── 1_vqa_evaluation_with_clip.py  # Qwen3-VL + CLIP多模型融合评估（含消融实验）
-│   └── vqa_common.py                  # 核心公共功能模块
+│   ├── 1_vqa_evaluation.py            # 单一模型评估脚本（仅Qwen3-VL）
+│   └── 1_vqa_evaluation_with_clip.py  # 双模型融合评估脚本（含消融实验）
 ├── data/                              # 数据目录
 │   ├── images/                        # 测试图像数据集
-│   │   ├── metadata.json              # 数据集元数据（包含图像、问题、答案）
-│   │   └── *.jpg                      # 测试图像文件
+│   │   ├── *.jpg                     # 测试图像文件
+│   │   └── metadata.json              # 数据集元数据文件
 │   └── results/                       # 评估结果输出目录
 │       ├── clip_demo/                 # CLIP演示结果
+│       │   ├── classification_comparison.png
+│       │   ├── classification_result.json
+│       │   ├── retrieval_comparison.png
+│       │   └── retrieval_result.json
 │       ├── qwen_demo/                 # Qwen3-VL演示结果
-│       ├── vqa_results_api/           # 单一模型API评估结果
-│       └── vqa_results_ablation/      # 多模型消融实验结果
-└── doc/                               # 项目文档目录
-    ├── 1_vqa_evaluation.md            # 单一模型评估详细文档
-    ├── 1_vqa_evaluation_with_clip.md  # 多模型融合评估详细文档
-    └── vqa_common.md                  # 公共功能模块文档
+│       │   ├── vqa_comparison.png
+│       │   └── vqa_result.json
+│       ├── vqa_results_api/           # 单一模型评估结果
+│       │   ├── all_results.json
+│       │   ├── category_statistics.png
+│       │   ├── evaluation_report.json
+│       │   ├── evaluation_summary.txt
+│       │   └── vqa_visualization.png
+│       └── vqa_results_ablation/      # 消融实验结果
+│           ├── ablation_comparison.png
+│           ├── ablation_report.json
+│           ├── all_results_clip_disabled.json
+│           ├── all_results_clip_enabled.json
+│           ├── category_statistics.png
+│           ├── evaluation_report_clip_disabled.json
+│           ├── evaluation_report_clip_enabled.json
+│           ├── evaluation_summary_clip_disabled.txt
+│           ├── evaluation_summary_clip_enabled.txt
+│           └── vqa_visualization.png
+└── .venv/                             # Python虚拟环境目录
 ```
 
-### 目录结构说明
+### 目录功能说明
 
-| 目录 | 功能描述 |
-|------|----------|
-| `src/` | 包含所有核心源代码文件，按功能模块化设计 |
-| `data/` | 包含测试数据和评估结果，便于数据管理和结果归档 |
-| `doc/` | 包含详细的模块文档，便于开发者理解和扩展 |
+`src/`目录包含所有核心源代码文件，按照功能进行模块化组织。`vqa_common.py`是公共功能模块，定义了模型初始化、数据处理、评估指标计算、可视化等通用函数，被其他脚本频繁调用。`0_clip_demo.py`是CLIP模型的演示脚本，展示了零样本图像分类和图文检索的基本功能。`0_qwen_reproduce.py`是Qwen3-VL的演示脚本，展示了单张图像问答的基本流程。`1_vqa_evaluation.py`是单一模型的评估脚本，仅使用Qwen3-VL进行VQA推理和评估。`1_vqa_evaluation_with_clip.py`是双模型融合的评估脚本，包含完整的消融实验功能。
 
-### 核心文件说明
+`data/`目录用于存放数据和结果文件。`data/images/`存放测试图像和元数据文件，其中`metadata.json`是关键的数据索引文件，记录了每个样本的图像文件名、问题文本和标准答案列表。`data/results/`存放所有评估输出结果，按照不同的评估类型分为四个子目录。`clip_demo/`存放CLIP演示的结果文件；`qwen_demo/`存放Qwen3-VL演示的结果文件；`vqa_results_api/`存放单一模型评估的结果文件；`vqa_results_ablation/`存放消融实验的结果文件。
 
-| 文件名 | 功能描述 |
-|--------|----------|
-| `vqa_common.py` | 核心公共功能模块，包含模型加载、数据处理、评估指标计算、可视化等关键功能 |
-| `1_vqa_evaluation.py` | 基于Qwen3-VL API的基础VQA评估脚本，不使用CLIP重排序，生成基础评估报告 |
-| `1_vqa_evaluation_with_clip.py` | 结合CLIP的增强版VQA评估脚本，包含完整的消融实验功能，对比有无CLIP重排序的效果 |
-| `0_clip_demo.py` | CLIP模型功能演示脚本，展示零样本分类、图像检索和相似度计算等功能 |
-| `0_qwen_reproduce.py` | Qwen3-VL模型基础演示脚本，展示单张图像问答、模型加载和推理等基本功能 |
-| `config.py` | 项目配置文件，包含模型路径、数据目录、评估参数等配置项 |
-| `.env` | 环境变量配置文件，包含API密钥等敏感信息，不建议提交到版本控制 |
-| `metadata.json` | 数据集元数据文件，包含图像文件名、问题、标准答案等信息，用于评估 |
+`.env`文件用于存储敏感的环境变量配置，主要是阿里云DashScope的API密钥。该文件不应提交到版本控制系统，以保护密钥安全。`.venv`目录是Python虚拟环境，包含了项目运行所需的所有依赖包。
 
-### 结果文件说明
+### 核心文件功能
 
-| 目录 | 功能描述 |
-|------|----------|
-| `clip_demo/` | CLIP模型演示结果，包含分类和检索结果的可视化和JSON数据 |
-| `qwen_demo/` | Qwen3-VL模型演示结果，包含单张图像问答的结果和可视化 |
-| `vqa_results_api/` | 单一模型API评估结果，包含评估报告、统计图表和详细结果 |
-| `vqa_results_ablation/` | 多模型消融实验结果，包含有无CLIP重排序的对比分析和可视化
+**config.py**：项目配置文件，定义了所有可配置的参数。包括路径配置（数据目录、结果目录）、模型配置（CLIP和Qwen3-VL的模型标识符）、数据集配置（常用的VQA数据集标识符）、实验参数（评估样本数量、计算设备选择）、提示词模板（不同类型问题的标准化提示词）、CLIP重排序配置（是否启用重排序、重排序阈值）、API配置（DashScope API密钥）。修改这个文件可以方便地调整系统的各种行为参数。
+
+**vqa_common.py**：公共功能模块，包含约30个核心函数，按功能分为12个部分：导入必要的库、中文字体配置、LangChain依赖导入和兼容性处理、图像处理函数、模型初始化函数、VQA推理函数、数据加载函数、文本处理函数、评估指标计算函数、可视化函数、评估指标计算函数（基础版）、结果保存函数。这个模块是整个系统的核心，几乎所有评估功能都依赖于这个模块提供的函数。
 
 ## 快速开始
 
-### 1. 环境配置
+### 环境准备
 
-```bash
-# 创建虚拟环境
-python -m venv .venv
+在开始使用本系统之前，需要完成以下准备工作：
 
-# 激活虚拟环境
-# Windows
-.venv\Scripts\activate
-# Linux/Mac
-source .venv/bin/activate
+**安装Python环境**：本项目需要Python 3.8或更高版本。建议使用Anaconda或Miniconda管理Python环境，可以方便地创建隔离的虚拟环境。可以通过官方网站下载安装包，或使用包管理器进行安装。安装完成后，可以通过运行`python --version`命令验证Python版本。
 
-# 安装依赖
-pip install -r requirements.txt
-```
+**创建虚拟环境**：使用Python的venv模块创建虚拟环境，可以将项目依赖与系统其他项目隔离。在项目根目录下运行以下命令创建虚拟环境：对于Windows系统，运行`.venv\Scripts\activate`激活虚拟环境；对于Linux或Mac系统，运行`source .venv/bin/activate`激活虚拟环境。激活虚拟环境后，后续安装的依赖包都会安装到这个环境中，不会影响系统级的Python环境。
 
-### 2. 环境变量配置
+**安装依赖包**：本项目依赖多个Python包，包括langchain-openai（LangChain的OpenAI兼容接口）、transformers（Hugging Face Transformer模型库）、torch（PyTorch深度学习框架）、PIL（Pillow图像处理库）、matplotlib（数据可视化库）、tqdm（进度条显示库）、python-dotenv（环境变量管理库）等。可以通过运行`pip install -r requirements.txt`命令一次性安装所有依赖。如果requirements.txt文件不存在，可以手动运行`pip install langchain-openai langchain-core transformers torch pillow matplotlib tqdm python-dotenv`命令安装。
 
-在项目根目录创建 `.env` 文件，添加以下内容：
+**配置API密钥**：本系统使用阿里云DashScope的Qwen3-VL API服务，需要有效的API密钥才能调用。首先登录阿里云控制台，搜索DashScope服务，进入DashScope管理页面。然后创建API密钥，将密钥保存到项目根目录的`.env`文件中，格式为`DASHSCOPE_API_KEY=your_api_key_here`。确保`.env`文件不要提交到版本控制系统，以保护密钥安全。
 
-```bash
-# 阿里云DashScope API密钥
-DASHSCOPE_API_KEY=your_api_key_here
+### 数据准备
 
-# CUDA设备配置（可选）
-CUDA_VISIBLE_DEVICES=0
-```
+本系统使用自定义的数据格式评估VQA模型，需要准备以下数据：
 
-### 3. 数据准备
+**图像文件**：将待评估的图像文件放置在`data/images/`目录下。支持的图像格式包括JPEG、PNG等常见格式。图像文件名需要与元数据文件中的记录一致。系统会自动扫描该目录下的所有图像文件进行评估。
 
-将测试图像放置在 `data/images/` 目录中，并确保存在 `metadata.json` 文件，格式如下：
+**元数据文件**：在`data/images/`目录下创建`metadata.json`文件，记录所有问答样本的标注信息。文件格式为JSON数组，每个元素包含以下字段：
 
 ```json
 [
     {
-        "id": "image_001",
+        "id": "sample_001",
         "image_file": "0.jpg",
-        "question": "这张图片中有什么？",
+        "question": "这张图片里有什么？",
         "answers": ["一只猫", "猫", "猫咪"]
+    },
+    {
+        "id": "sample_002",
+        "image_file": "1.jpg",
+        "question": "图片中有多少人？",
+        "answers": ["2", "两个人", "2个"]
     }
 ]
 ```
 
-## 使用指南
+每个字段的含义如下：`id`是样本的唯一标识符；`image_file`是图像文件名，需要与`data/images/`目录下的实际文件名一致；`question`是针对该图像提出的问题；`answers`是标准答案列表，包含多个可接受的答案变体，评估时只要预测答案与其中任何一个匹配即视为正确。
 
-### 基础演示
+### 运行演示
 
-#### CLIP模型演示
+系统提供了多个演示脚本，可以快速体验系统功能：
 
-```bash
-python src/0_clip_demo.py
-```
+**CLIP模型演示**：运行`python src/0_clip_demo.py`启动CLIP模型演示。该脚本会演示CLIP的零样本图像分类和图文检索功能。零样本分类会展示如何不经过训练就对图像进行分类；图文检索会展示如何根据文本查询在图像库中找到最相关的图像。演示结果会保存在`data/results/clip_demo/`目录下。
 
-功能：
-- 零样本图像分类
-- 文本检索图像
-- 图像-文本相似度计算
+**Qwen3-VL模型演示**：运行`python src/0_qwen_reproduce.py`启动Qwen3-VL模型演示。该脚本会演示如何使用LangChain API调用Qwen3-VL进行单张图像的视觉问答。系统会选择`data/images/5.jpg`作为测试图像，询问图片内容并展示模型回答。演示结果会保存在`data/results/qwen_demo/`目录下。
 
-#### Qwen3-VL模型演示
+### 运行评估
 
-```bash
-python src/0_qwen_reproduce.py
-```
+**单一模型评估**：运行`python src/1_vqa_evaluation.py`启动仅使用Qwen3-VL的评估。该脚本会对`metadata.json`中记录的所有样本进行VQA推理和评估，计算精确匹配准确率、各问题类型的分类准确率等指标。评估结果会保存在`data/results/vqa_results_api/`目录下，包括完整结果JSON、评估报告JSON、文本摘要TXT、可视化图表PNG等文件。
 
-功能：
-- 单张图像问答
-- 模型加载和推理
-- 基础多模态理解
-
-### 评估系统
-
-#### 单一模型评估
-
-```bash
-python src/1_vqa_evaluation.py
-```
-
-功能：
-- Qwen3-VL API版本的VQA性能评估
-- 问题类型分类评估
-- 多种匹配策略（精确匹配、模糊匹配）
-- 可视化结果和统计报告
-
-#### 多模型融合评估（推荐）
-
-```bash
-python src/1_vqa_evaluation_with_clip.py
-```
-
-增强功能：
-- Qwen3-VL + CLIP组合评估
-- CLIP重排序机制优化答案质量
-- 完整的消融实验对比
-- 详细的对比分析报告
-
-## 评估指标
-
-### 主要指标
-
-- **总体准确率**: 正确预测样本数 / 总样本数
-- **分类准确率**: 按问题类型分别计算准确率
-- **模糊匹配率**: 使用模糊匹配策略的准确率
-- **CLIP优化率**: 通过CLIP重排序改善的样本比例
-
-### 问题类型分类
-
-- **计数问题** (counting): "有多少个..."、"How many..."
-- **属性问题** (attribute): "什么颜色"、"什么品牌"
-- **空间关系** (spatial): "左边是什么"、"位置关系"
-- **文字识别** (reading): "写了什么"、"读取文字"
-- **是否问题** (yesno): "是否是..."、"有没有..."
-- **识别问题** (identification): "这是什么"、"谁在..."
-
-### 匹配策略
-
-1. **精确匹配**: 标准化后完全相同的答案
-2. **子串匹配**: 一个答案包含另一个
-3. **单词重叠**: 词汇重叠度超过70%
-4. **CLIP相似度**: 基于视觉相似度的匹配
-
-## 输出文件
-
-### 基础评估结果
-
-```
-data/results/vqa_results_api/
-├── all_results.json              # 完整评估结果
-├── evaluation_report.json        # 评估报告
-├── evaluation_summary.txt        # 文本摘要
-├── vqa_visualization.png         # 结果可视化
-└── category_statistics.png       # 分类统计图表
-```
-
-### 消融实验结果
-
-```
-data/results/vqa_results_ablation/
-├── ablation_comparison.png          # 对比图表
-├── ablation_report.json             # 消融实验报告
-├── all_results_clip_disabled.json   # 禁用CLIP重排序的结果
-├── all_results_clip_enabled.json    # 启用CLIP重排序的结果
-├── category_statistics.png          # 分类统计
-├── evaluation_report_clip_disabled.json  # 禁用CLIP的评估报告
-├── evaluation_report_clip_enabled.json   # 启用CLIP的评估报告
-├── evaluation_summary_clip_disabled.txt  # 禁用CLIP的文本摘要
-├── evaluation_summary_clip_enabled.txt   # 启用CLIP的文本摘要
-└── vqa_visualization.png           # 结果可视化
-```
-
-## 公共功能模块
-
-`vqa_common.py` 模块包含以下核心功能：
-
-| 功能类别 | 函数名 | 功能描述 |
-|----------|--------|----------|
-| 模型初始化 | `load_model` | 初始化Qwen3-VL API客户端 |
-| 数据处理 | `load_metadata` | 加载和解析数据集元数据 |
-| 数据处理 | `normalize_answer` | 答案标准化和预处理 |
-| 问题分类 | `classify_question` | 自动分类问题类型 |
-| VQA推理 | `vqa_inference` | 调用Qwen3-VL API进行推理 |
-| 评估指标 | `compute_exact_match` | 计算精确匹配准确率 |
-| 评估指标 | `compute_fuzzy_match` | 计算模糊匹配准确率 |
-| 评估指标 | `compute_accuracy` | 综合评估指标计算 |
-| 可视化 | `create_visualization` | 生成结果可视化 |
-| 可视化 | `create_category_chart` | 生成分类统计图表 |
+**双模型融合评估（推荐）**：运行`python src/1_vqa_evaluation_with_clip.py`启动双模型融合评估。该脚本会先运行基线评估（不使用CLIP重排序），然后运行增强评估（使用CLIP重排序），最后生成消融实验对比报告。这种评估方式可以量化CLIP重排序机制对系统性能的贡献。评估结果会保存在`data/results/vqa_results_ablation/`目录下。
 
 ## 配置说明
 
-`config.py` 文件包含以下主要配置项：
+### 模型配置
+
+`config.py`文件中的`MODELS`字典定义了使用的预训练模型：
 
 ```python
-# 模型配置
 MODELS = {
-    "clip": "openai/clip-vit-base-patch32",  # CLIP模型路径
-    "qwen": "Qwen/Qwen3-VL-4B-Instruct"       # Qwen3-VL模型路径
+    "clip": "openai/clip-vit-base-patch32",
+    "qwen": "Qwen/Qwen3-VL-4B-Instruct"
 }
-
-# 数据目录配置
-DATA_IMAGES = os.path.join("data", "images")
-DATA_RESULTS = os.path.join("data", "results")
-
-# 评估参数
-SAMPLE_SIZE = 100          # 评估样本数量
-CLIP_RERANK = True         # 是否启用CLIP重排序
-CLIP_THRESHOLD = 0.3       # CLIP重排序阈值
 ```
 
-## 扩展开发
+`clip`字段指定了使用的CLIP模型，默认为`openai/clip-vit-base-patch32`。这是OpenAI开源的CLIP ViT-B/32版本，在大规模图文数据集上预训练，具有良好的零样本分类和图文匹配能力。如果需要使用其他版本的CLIP，可以修改这个值，例如`openai/clip-vit-large-patch14`可以提供更好的性能但需要更多显存。
 
-### 添加新模型
+`qwen`字段指定了使用的Qwen3-VL模型，默认为`Qwen/Qwen3-VL-4B-Instruct`。这是4B参数版本的指令调优模型，专门针对VQA等任务进行了优化。阿里云还提供了更大规模的版本如`Qwen/Qwen3-VL-8B-Instruct`，可以提供更高的准确率但需要更多的计算资源。
 
-1. 在 `config.py` 中添加模型配置
-2. 在 `vqa_common.py` 中实现模型加载和推理函数
-3. 更新评估脚本，集成新模型
+### 评估参数
 
-### 添加新评估指标
+`SAMPLE_SIZE`参数控制评估的样本数量，默认为100。如果设置为`None`，则评估数据集中的全部样本。对于快速验证和调试，建议使用较小的样本数量（如20或50）；对于正式的评估实验，建议使用全部样本或较大的样本数量（如200或500）。
 
-1. 在 `vqa_common.py` 中添加新的评估函数
-2. 更新 `compute_metrics_base` 函数，集成新指标
-3. 修改可视化函数，添加新指标的展示
+`CLIP_RERANK`参数控制是否启用CLIP答案重排序功能，默认为`True`。启用时，系统会在Qwen3-VL生成答案后使用CLIP进行验证和优化；禁用时，系统仅使用Qwen3-VL的原始答案。通过对比启用和禁用两种模式的结果，可以评估CLIP重排序机制的有效性。
 
-### 自定义数据集格式
+`CLIP_THRESHOLD`参数控制CLIP重排序的阈值，默认为0.3。这个值表示当Qwen3-VL生成的答案与图像的CLIP相似度低于此阈值时，系统会考虑替换为其他候选答案。阈值越低，重排序越保守（较少替换答案）；阈值越高，重排序越激进（更多替换答案）。建议根据具体任务调整这个值。
 
-1. 修改 `load_metadata` 函数，支持新的数据集格式
-2. 调整评估逻辑，适配新的数据结构
+### 数据目录配置
+
+`DATA_IMAGES`变量指定了图像数据目录，默认为`data/images`。如果希望使用其他目录存放图像，需要修改这个值。同时需要确保`metadata.json`文件位于该目录下，并且图像文件名与元数据中的记录一致。
+
+`DATA_RESULTS`变量指定了评估结果输出目录，默认为`data/results`。所有评估脚本生成的结果文件都会保存在这个目录下。如果希望将结果保存到其他位置，可以修改这个值。
+
+## 评估指标
+
+### 主要评估指标
+
+**总体准确率（Overall Accuracy）**：正确预测的样本数除以总样本数，是最常用的评估指标。计算公式为：准确率 = 正确预测数 / 总样本数。准确率越高，说明模型的整体性能越好。
+
+**模糊匹配率（Fuzzy Accuracy）**：使用模糊匹配策略计算的正确率。与精确匹配不同，模糊匹配允许一定程度的答案偏差，例如子串匹配、词汇重叠等。这种评估方式更能反映答案的语义正确性，通常会比精确匹配率更高。
+
+**分类准确率（Category Accuracy）**：按问题类型分别计算的准确率。系统将问题分为7个类别：计数问题（counting）、属性问题（attribute）、空间关系问题（spatial）、文字识别问题（reading）、是否问题（yesno）、识别问题（identification）和其他（other）。分类准确率可以帮助了解模型在不同类型问题上的表现差异。
+
+**CLIP优化率（CLIP Improvement Rate）**：被CLIP重排序优化的样本比例。计算公式为：优化率 = CLIP优化数 / 总样本数。这个指标反映了CLIP重排序机制的活跃程度。
+
+### 问题类型分类
+
+系统使用基于关键词匹配的方法自动将问题分类到预定义的类型中：
+
+**计数问题（counting）**：询问对象数量的问句。关键词包括英文的`how many`、`count`、`number of`和中文的`多少`、`数量`等。例如「图片里有几只猫？」、「桌上有多少个苹果？」。
+
+**属性问题（attribute）**：询问对象属性特征的问句。关键词包括英文的`what color`、`what brand`、`what type`和中文的`什么颜色`、`什么品牌`、`什么类型`等。例如「猫是什么颜色的？」、「汽车是什么品牌的？」。
+
+**空间关系问题（spatial）**：询问对象之间空间位置关系的问句。关键词包括英文的`where`、`what is on the left`、`what is on the right`和中文的`位置`、`左边`、`右边`等。例如「猫在桌子的左边还是右边？」、「书在什么东西上面？」。
+
+**文字识别问题（reading）**：询问图像中文字内容的问句。关键词包括英文的`what does it say`、`what is written`和中文的`写的什么`、`文字`、`读取`等。例如「招牌上写了什么？」、「书上有什么文字？」。
+
+**是否问题（yesno）**：询问是/否判断的问句。关键词包括英文的`is this`、`are there`和中文的`是否`、`是不是`等。例如「图片里有猫吗？」、「桌上有杯子吗？」。
+
+**识别问题（identification）**：询问对象名称或身份的问句。关键词包括英文的`what is this`、`who is`和中文的`是什么`、`谁`等。例如「这是什么动物？」、「图片里的人是谁？」。
+
+### 匹配策略
+
+**精确匹配（Exact Match）**：将预测答案和标准答案进行标准化处理后，完全相同则视为正确。标准化处理包括转换为小写、去除标点符号、合并空格等。这种策略最为严格，要求答案完全一致。
+
+**模糊匹配（Fuzzy Match）**：使用多种宽松的匹配策略。策略优先级从高到低为：精确匹配、子串匹配（标准答案是预测的子集）、词汇重叠（重叠度超过70%）。只要满足任一条件即视为正确。
+
+**综合准确率（Comprehensive Accuracy）**：综合考虑多种匹配情况计算得分。精确匹配得1.0分，标准答案是预测子集得0.9分，预测是标准超集得0.8分，词汇重叠按比例得分。最高分数超过0.6阈值则视为正确。
+
+## 输出文件说明
+
+### 单一模型评估结果
+
+`data/results/vqa_results_api/`目录包含使用单一Qwen3-VL模型的评估结果：
+
+**all_results.json**：包含所有样本的完整评估结果，每个样本记录包括样本ID、图像文件名、问题文本、问题类型、模型预测答案、标准答案、是否正确等信息。这个文件可以用于后续的离线分析和处理。
+
+**evaluation_report.json**：包含评估报告的JSON格式，报告内容包括评估时间、使用的模型、各项评估指标、前20个样本的详细结果等。这个文件适合程序化读取和解析。
+
+**evaluation_summary.txt**：包含评估摘要的文本格式，报告内容包括总样本数、正确预测数、总体准确率、各问题类型的准确率等。这个文件适合人工阅读和快速了解评估结果。
+
+**vqa_visualization.png**：包含随机选取的评估样本可视化，展示成功和失败的案例。每个样本显示图像、问题、预测答案和真实答案，并标注是否正确。这种可视化有助于直观了解模型的表现。
+
+**category_statistics.png**：包含各问题类型的统计图表，左图展示各类别的样本数量和正确数量，右图展示各类别的准确率。准确率使用颜色编码，绿色表示良好（>50%），橙色表示一般（30%-50%），红色表示需要改进（<30%）。
+
+### 消融实验结果
+
+`data/results/vqa_results_ablation/`目录包含启用和禁用CLIP重排序两种模式的评估结果：
+
+**all_results_clip_disabled.json**：禁用CLIP重排序时的完整评估结果。
+
+**all_results_clip_enabled.json**：启用CLIP重排序时的完整评估结果。
+
+**evaluation_report_clip_disabled.json**：禁用CLIP重排序时的评估报告。
+
+**evaluation_report_clip_enabled.json**：启用CLIP重排序时的评估报告。
+
+**evaluation_summary_clip_disabled.txt**：禁用CLIP重排序时的文本摘要。
+
+**evaluation_summary_clip_enabled.txt**：启用CLIP重排序时的文本摘要。
+
+**ablation_comparison.png**：消融实验对比图，左图展示各类别在两种模式下的准确率对比，右图展示整体指标对比（准确率、模糊匹配率、CLIP优化数）。
+
+**ablation_report.json**：消融实验的综合报告，包含基线模型和CLIP模型的详细指标对比，以及改进情况统计。
+
+## 公共模块API参考
+
+### 模型相关函数
+
+**load_model(api_key, model_name)**：初始化Qwen3-VL模型客户端。参数`api_key`是DashScope API密钥，`model_name`是模型名称。返回值为包含LLM客户端和模型名称的元组。该函数优先使用LangChain接口，如果LangChain不可用则降级使用原生OpenAI API。
+
+**image_to_base64(image_path)**：将图像转换为base64编码字符串。参数`image_path`是图像文件路径。返回值为base64编码的字符串，失败返回None。该函数会自动处理图像格式转换、尺寸调整（最大1024像素）和JPEG压缩。
+
+### 数据处理函数
+
+**load_metadata(data_dir)**：加载数据集元数据。参数`data_dir`是数据目录路径。返回值为元数据列表，每个元素是包含`id`、`image_file`、`question`、`answers`字段的字典。该函数会读取并解析`metadata.json`文件。
+
+**normalize_answer(answer)**：对答案文本进行标准化处理。参数`answer`是原始答案字符串。返回值为标准化后的字符串。标准化步骤包括：转换为小写、去除首尾空白、移除标点符号、合并连续空格。
+
+**classify_question(question)**：对问题进行自动分类。参数`question`是问题文本字符串。返回值为问题类型名称字符串，可能的值为`counting`、`attribute`、`spatial`、`reading`、`yesno`、`identification`或`other`。
+
+### 评估函数
+
+**compute_exact_match(pred, targets)**：计算精确匹配。参数`pred`是预测答案，`targets`是标准答案列表。返回值为布尔值，只要有任何一个标准答案与预测匹配即返回True。
+
+**compute_fuzzy_match(pred, targets)**：计算模糊匹配。参数`pred`是预测答案，`targets`是标准答案列表。返回值为布尔值，满足精确匹配、子串匹配或词汇重叠（>70%）任一条件即返回True。
+
+**compute_accuracy(pred, targets)**：计算综合准确率。参数`pred`是预测答案，`targets`是标准答案列表。返回值为布尔值，综合得分超过0.6阈值即返回True。
+
+### 可视化函数
+
+**create_category_chart(category_stats, output_dir)**：创建分类统计图表。参数`category_stats`是分类统计数据字典，`output_dir`是输出目录路径。返回值为保存的图表文件路径。
+
+**create_visualization(results, image_dir, output_dir, num_samples, show_clip_info)**：创建评估结果可视化。参数`results`是评估结果列表，`image_dir`是图像目录路径，`output_dir`是输出目录路径，`num_samples`是展示样本数（默认20），`show_clip_info`是否显示CLIP信息（默认False）。返回值为保存的图表文件路径。
 
 ## 常见问题
 
-### Q: API调用失败怎么办？
-A: 检查网络连接和API密钥配置，确保DashScope服务可用。系统已添加重试机制和延迟控制，可减少API调用失败的概率。
+### API相关问题
 
-### Q: CLIP模型加载慢怎么办？
-A: 首次运行会下载模型权重，后续运行会使用缓存。可以使用更小的CLIP模型版本，或预下载模型权重。
+**问题：提示API密钥无效或缺失怎么办？**
 
-### Q: 评估结果不理想怎么办？
-A: 调整 `CLIP_THRESHOLD` 参数，优化提示词模板，或尝试不同的匹配策略。
+首先检查`.env`文件是否正确创建并包含有效的`DASHSCOPE_API_KEY`配置。然后确认API密钥具有调用Qwen3-VL的权限，可以在阿里云DashScope控制台检查密钥状态。如果API密钥正确但仍然失败，可能是网络连接问题或API服务暂时不可用。可以尝试使用VPN或检查网络设置。
 
-### Q: 如何增加新的问题类型？
-A: 在 `classify_question` 函数中添加新的关键词分类，更新统计逻辑。
+**问题：API调用返回超时或失败怎么办？**
 
-## 更新日志
+系统已内置重试机制和延迟控制，可以减少API调用失败的概率。如果持续失败，可能是达到了API调用频率限制。建议在`config.py`中增加`time.sleep`的延迟时间，或联系阿里云提高调用配额。也可以尝试在非高峰期运行评估任务。
 
-### v1.0.0 (当前版本)
-- ✅ 完整的Qwen3-VL + CLIP融合评估系统
-- ✅ 模块化架构，公共功能提取到独立模块
-- ✅ 消融实验和对比分析
-- ✅ 中文界面和详细文档
-- ✅ 多种评估指标和可视化
-- ✅ 修复中文显示问题和TypeError错误
-- ✅ 详细的行注释和代码文档
+**问题：首次运行很慢怎么办？**
 
-### 计划功能
-- 🔄 支持更多VQA数据集
-- 🔄 增加更多多模态模型
-- 🔄 Web界面和API服务
-- 🔄 实时评估和监控
-- 🔄 模型微调和优化
+首次运行时会自动下载CLIP模型权重（约300MB），这需要一定时间。后续运行会使用本地缓存，速度会快很多。确保网络连接稳定，可以提前使用`transformers`库手动下载模型。
 
-## 许可证
+### 评估相关问题
 
-本项目采用 MIT 许可证。详见 LICENSE 文件。
+**问题：评估结果不理想怎么办？**
 
-## 致谢
+首先检查问题分类是否正确，某些问题可能被错误分类到不合适的类别。然后尝试调整`CLIP_THRESHOLD`参数，较低的阈值会使CLIP重排序更保守，可能减少错误替换但也减少优化机会。还可以尝试修改`vqa_inference`函数中的提示词模板，使其更适合特定类型的问题。
 
-- 阿里云通义千问团队提供Qwen3-VL模型
-- OpenAI团队开源CLIP模型
-- Hugging Face提供Transformers库
+**问题：如何增加新的问题类型？**
 
----
+在`vqa_common.py`的`classify_question`函数中添加新的关键词分类。新增的关键词列表到`categories`字典中，并为新类型在`evaluate_dataset`函数中初始化统计数据。
 
-**注意**: 本项目仅供学习和研究使用，商业使用请遵循相关模型的使用协议。
+**问题：能否使用自己的数据集？**
+
+完全可以。只需准备符合格式要求的`metadata.json`文件，将图像文件放在指定目录即可。如果数据集格式不同，可以修改`load_metadata`函数以支持新的数据格式。
+
+### 可视化相关问题
+
+**问题：中文字体显示为方框怎么办？**
+
+系统会自动检测并加载可用的中文字体。如果检测失败，可能是因为系统没有安装中文字体。对于Windows系统，可以安装「微软雅黑」或「思源黑体」等字体；对于Linux系统，可以安装`fonts-noto-cjk`包；对于Mac系统，通常自带中文字体。
+
+**问题：可视化图表保存失败怎么办？**
+
+检查输出目录是否存在且有写入权限。确保没有其他程序正在打开生成的文件。如果问题持续，可以尝试修改`create_xxx`函数中的保存路径，使用绝对路径。
+
+## 版本更新日志
+
+### v1.0.0（当前版本）
+
+本版本完成了以下功能开发：
+
+实现了完整的Qwen3-VL + CLIP融合评估系统，支持双模型协同工作的VQA推理和评估。系统采用模块化架构，核心功能提取到独立的`vqa_common.py`模块中，便于维护和扩展。提供了完整的消融实验功能，可以对比启用和禁用CLIP重排序的效果差异。全面的中文支持，包括中文注释、中文界面和中文报告。多种评估指标支持，包括精确匹配、模糊匹配、分类准确率等。丰富的可视化功能，包括分类统计、样本展示、消融对比等多种图表。
+

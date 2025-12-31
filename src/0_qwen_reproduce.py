@@ -1,48 +1,144 @@
 """
-Qwen3-VL模型复现演示 (LangChain API版本)
-==========================================
+================================================================================
+Qwen3-VL模型复现演示脚本 (LangChain API版本)
+================================================================================
 
-本文件演示了使用LangChain API调用Qwen3-VL模型，无需本地GPU显存。
-主要功能：
-1. 使用LangChain ChatOpenAI统一接口
-2. 无需本地模型加载
-3. 适合快速原型开发
+本文件演示了I调用Qwen3-VL模型进行视觉问答（VQA）。
+
+
+主要功能模块：
+1. 模型初始化 - 使用LangChain统一接口配置Qwen3-VL客户端
+2. 图像处理 - 将图像转换为base64编码格式
+3. 视觉问答 - 对单张图像进行问答推理
+4. 结果保存 - 将问答结果保存为JSON和可视化图像
+
+================================================================================
 """
+
+# ==============================================================================
+# 第一部分：环境配置和库导入
+# ==============================================================================
+
+# 导入标准库
 import os
+
+# 设置OpenMP库兼容性选项
+# 解决某些系统上可能出现的多重库冲突问题
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 
-from config import DATA_IMAGES, DATA_RESULTS, API_KEY
-from vqa_common import save_vqa_result, create_vqa_visualization_comparison, load_model, image_to_base64
 
+from config import DATA_IMAGES, DATA_RESULTS, API_KEY
+# 导入公共功能模块中的辅助函数
+from vqa_common import (
+    save_vqa_result,                      # 保存VQA结果到JSON
+    create_vqa_visualization_comparison,  # 创建VQA可视化对比图
+    load_model,                           # 初始化模型客户端
+    image_to_base64                       # 图像base64编码
+)
 from langchain_core.messages import HumanMessage
 
+# ==============================================================================
+# 第二部分：模型初始化
+# ==============================================================================
+
+# 初始化Qwen3-VL API客户端
+# 使用config.py中配置的API_KEY
+# load_model函数会创建LangChain ChatOpenAI客户端
 print("初始化 Qwen3-VL API 客户端...")
 llm, model_name = load_model(API_KEY)
 
+# ==============================================================================
+# 第三部分：图像选择
+# ==============================================================================
+
+# 选择测试图像
+# DATA_IMAGES是从config.py导入的图像目录路径
 image_path = DATA_IMAGES / "5.jpg"
 
+# ==============================================================================
+# 第四部分：图像编码
+# ==============================================================================
+
+# 将图像转换为base64编码
+# 这是API调用所必需的格式
+# image_to_base64函数会：
+#   1. 打开并读取图像文件
+#   2. 转换为RGB模式
+#   3. 调整图像尺寸（最大1024像素）
+#   4. 压缩为JPEG格式
+#   5. 转换为base64字符串
 base64_image = image_to_base64(image_path)
+
+# 检查图像处理是否成功
 if not base64_image:
     print("无法处理图片")
     exit(1)
 
+# ==============================================================================
+# 第五部分：构造消息
+# ==============================================================================
+
+# 构造多模态消息
+# HumanMessage支持包含多种类型的内容
+# content字段是一个列表，可以同时包含文本和图像
 message = HumanMessage(
     content=[
+        # 文本内容：问题
         {"type": "text", "text": "这个图片是什么？请简短回答。"},
+        # 图像内容：base64编码的图像
         {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
     ]
 )
 
+# ==============================================================================
+# 第六部分：模型推理
+# ==============================================================================
+
+# 调用模型生成答案
+# llm.invoke()方法接收消息列表，返回模型的响应
 response = llm.invoke([message])
+
+# 提取答案内容
+# response.content包含模型的回复文本
+# strip()去除首尾空白字符
 answer = response.content.strip()
 
-print("=== Qwen3-VL 视觉问答演示 ===")
+# ==============================================================================
+# 第七部分：结果展示
+# ==============================================================================
+
+# 打印评估结果
+print("=" * 60)
+print("Qwen3-VL 视觉问答演示")
+print("=" * 60)
+
 print(f"图像文件: {os.path.basename(image_path)}")
 print(f"问题: 这个图片是什么?")
 print(f"回答: {answer}")
 
+# ==============================================================================
+# 第八部分：结果保存
+# ==============================================================================
+
+# 创建输出目录
 qwen_output_dir = DATA_RESULTS / "qwen_demo"
 os.makedirs(qwen_output_dir, exist_ok=True)
+
+# 保存VQA结果到JSON文件
+# JSON格式便于后续分析和处理
 save_vqa_result(image_path, "这个图片是什么?", answer, qwen_output_dir)
-create_vqa_visualization_comparison(image_path, "这个图片是什么?", answer, os.path.join(qwen_output_dir, "vqa_comparison.png"))
+
+# 创建可视化对比图
+# 左侧显示原图，右侧显示问答结果
+create_vqa_visualization_comparison(
+    image_path, 
+    "这个图片是什么?", 
+    answer, 
+    os.path.join(qwen_output_dir, "vqa_comparison.png")
+)
+
+# ==============================================================================
+# 第九部分：完成提示
+# ==============================================================================
+
 print(f"\n所有结果已保存至: {qwen_output_dir}")
