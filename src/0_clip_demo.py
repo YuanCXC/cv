@@ -5,7 +5,6 @@ CLIP模型基础演示脚本
 
 LIP模型调用的基本方法。
 
-
 主要功能模块：
 1. 零样本图像分类 - 使用pipeline一行代码完成图像分类
 2. 图文检索 - 使用CLIP特征提取进行相似度计算和图像检索
@@ -35,7 +34,6 @@ from vqa_common import (
     create_visualization_comparison,  # 创建分类可视化对比图
     create_retrieval_comparison    # 创建检索可视化对比图
 )
-
 from transformers import pipeline, AutoProcessor, AutoModelForZeroShotImageClassification
 import torch
 from PIL import Image
@@ -45,9 +43,7 @@ import numpy as np
 # 第二部分：模型初始化
 # ==============================================================================
 
-# 创建零样本图像分类pipeline
-# 使用OpenAI开源的CLIP ViT-B/32模型
-# 该模型在大规模图文数据集上预训练，具有强大的零样本分类能力
+# 创建零样本图像分类pipeline：内部自动加载了对应的processor和model
 classifier = pipeline("zero-shot-image-classification", model="openai/clip-vit-base-patch32")
 print("CLIP分类器加载完成")
 
@@ -64,7 +60,6 @@ clip_model = AutoModelForZeroShotImageClassification.from_pretrained("openai/cli
 clip_model.eval()
 
 # 自动检测并选择计算设备
-# 如果有NVIDIA GPU可用，使用cuda，否则使用cpu
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 将模型移动到指定设备
@@ -73,7 +68,7 @@ print(f"CLIP模型已加载到: {device}")
 
 
 # ==============================================================================
-# 第三部分：零样本图像分类函数
+# 第三部分：零样本图像分类函数：使用pipline
 # ==============================================================================
 
 def zero_shot_classification(image_path, labels):
@@ -99,15 +94,7 @@ def zero_shot_classification(image_path, labels):
             - top_label: 概率最高的标签
             - top_prob: 最高概率值
             - all_probs: 所有标签的概率字典
-            
-    使用示例：
-        labels = ["a cat", "a dog", "a car"]
-        result = zero_shot_classification("image.jpg", labels)
-        print(f"预测: {result['top_label']}, 概率: {result['top_prob']:.3f}")
-        
-    注意事项：
-        - 标签文本的表述会影响分类效果
-        - 建议使用简洁明确的标签描述
+
     """
     # 确保路径是字符串类型
     if not isinstance(image_path, str):
@@ -135,7 +122,7 @@ def zero_shot_classification(image_path, labels):
 
 
 # ==============================================================================
-# 第四部分：图文检索函数
+# 第四部分：图文检索函数：使用processor和clip_model
 # ==============================================================================
 
 def text_image_retrieval(text, image_folder, top_k=3):
@@ -165,20 +152,10 @@ def text_image_retrieval(text, image_folder, top_k=3):
                 - similarity: 相似度分数
                 - rank: 排名
             如果没有找到图像，返回None
-        
-    使用示例：
-        results = text_image_retrieval("a person", "data/images", top_k=5)
-        for r in results["results"]:
-            print(f"排名{r['rank']}: {r['image']} (相似度: {r['similarity']:.3f})")
-            
-    检索策略：
-        - 使用CLIP的文本特征和图像特征
-        - 特征向量进行L2归一化
-        - 通过矩阵乘法高效计算所有图像的相似度
+
     """
     # 扫描文件夹中的图像文件
-    images = [f for f in os.listdir(image_folder) 
-              if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+    images = [f for f in os.listdir(image_folder) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
     
     # 检查是否找到图像
     if not images:
@@ -191,18 +168,16 @@ def text_image_retrieval(text, image_folder, top_k=3):
     # 使用PIL打开所有图像并转换为RGB模式
     pil_images = [Image.open(p).convert("RGB") for p in image_paths]
 
-    # 禁用梯度计算，减少内存占用并加速推理
+    # 禁用梯度计算
     with torch.no_grad():
         # 处理文本输入
-        # return_tensors="pt" 返回PyTorch张量
-        # padding=True 将不同长度的文本填充到相同长度
+        # return_tensors="pt" 返回PyTorch张量，padding=True 将不同长度的文本填充到相同长度
         text_inputs = processor(text=[text], return_tensors="pt", padding=True).to(device)
         
         # 获取文本特征向量
         text_features = clip_model.get_text_features(**text_inputs)
         
         # L2归一化，使特征向量的模为1
-        # 归一化后，余弦相似度等于向量点积
         text_features = text_features / text_features.norm(dim=-1, keepdim=True)
 
         # 处理图像输入
@@ -215,7 +190,7 @@ def text_image_retrieval(text, image_folder, top_k=3):
         image_features = image_features / image_features.norm(dim=-1, keepdim=True)
 
         # 计算文本与所有图像的相似度
-        # 通过矩阵乘法一次计算所有相似度
+        # 通过矩阵乘法一次计算所有相似度，归一化后，余弦相似度等于向量点积
         similarities = (text_features @ image_features.T).squeeze(0)
 
     # 限制返回数量不超过图像总数

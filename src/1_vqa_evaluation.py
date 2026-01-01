@@ -80,8 +80,7 @@ def evaluate_dataset(llm, model_name, metadata, image_dir, sample_size=100):
     
     # 初始化分类统计字典
     # 包含7种预定义问题类型和1个'other'类型
-    category_stats = {cat: {'correct': 0, 'total': 0} for cat in
-                      ['counting', 'attribute', 'spatial', 'reading', 'yesno', 'identification', 'other']}
+    category_stats = {cat: {'correct': 0, 'total': 0} for cat in ['counting', 'attribute', 'spatial', 'reading', 'yesno', 'identification', 'other']}
 
     print(f"开始评估 {len(metadata)} 张图片...")
 
@@ -170,7 +169,7 @@ def save_results(results, metrics, output_dir):
 
     # 保存评估摘要为文本
     with open(os.path.join(output_dir, 'evaluation_summary.txt'), 'w', encoding='utf-8') as f:
-        f.write("Qwen3-VL VQA 评估报告 (LangChain版本)\n")
+        f.write("Qwen3-VL VQA 评估报告\n")
         f.write("=" * 50 + "\n\n")
         
         # 总体统计
@@ -211,7 +210,7 @@ def main():
 
     # 打印标题
     print("=" * 50)
-    print("Qwen3-VL VQA 评估 (LangChain版本)")
+    print("Qwen3-VL VQA 评估")
     print("=" * 50)
 
     # 初始化模型
@@ -249,7 +248,4 @@ def main():
 # ==============================================================================
 
 if __name__ == "__main__":
-    """
-    程序入口点
-    """
     main()

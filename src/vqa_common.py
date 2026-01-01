@@ -6,7 +6,7 @@ VQA 公共功能模块
 本文件是VQA（Visual Question Answering，视觉问答）评估系统的核心公共功能模块，
 
 功能概览：
-1. 模型初始化和客户端配置 - 支持LangChain和原生OpenAI API两种调用方式
+1. 模型初始化和客户端配置 - 支持LangChain调用方式
 2. 数据加载和预处理 - 加载数据集元数据，处理图像文件
 3. 文本处理和标准化 - 答案标准化、文本清理
 4. 问题分类系统 - 自动识别问题类型（计数、属性、空间关系等）
@@ -28,6 +28,9 @@ import re
 import base64
 from io import BytesIO
 from datetime import datetime
+
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import HumanMessage, SystemMessage
 
 # 图像处理库
 from PIL import Image, ImageDraw, ImageFont
@@ -162,32 +165,6 @@ def get_chinese_font():
     return None
 
 
-# ==============================================================================
-# 第三部分：LangChain依赖导入和兼容性处理
-# ==============================================================================
-# LangChain提供了统一的API调用接口，简化了与大语言模型的交互
-# 如果LangChain未安装，系统会降级使用原生OpenAI API
-
-
-try:
-    # 从langchain_openai导入ChatOpenAI类
-    # 这是LangChain提供的OpenAI兼容接口
-    from langchain_openai import ChatOpenAI
-    
-    # 导入消息相关的类
-    from langchain_core.messages import HumanMessage, SystemMessage
-    
-    # 导入工具相关功能
-    from langchain_core.tools import tool
-    
-    # 设置标志变量，表示LangChain可用
-    LANGCHAIN_AVAILABLE = True
-    
-except ImportError:
-    # 如果导入失败（未安装LangChain），设置标志变量为False
-    LANGCHAIN_AVAILABLE = False
-    print("LangChain未安装，将使用原始OpenAI API")
-
 
 # ==============================================================================
 # 第四部分：图像处理函数
@@ -256,43 +233,34 @@ def load_model(api_key, model_name="qwen3-vl-8b-instruct"):
     初始化Qwen3-VL模型客户端
     
     该函数创建用于调用Qwen3-VL模型的客户端对象。
-    支持两种调用方式：
-    1. LangChain统一接口（推荐）
-    2. 原生OpenAI API（当LangChain不可用时）
+    调用方式：LangChain统一接口
+
     
     Args:
         api_key (str): DashScope API密钥
         model_name (str): 模型名称，默认为"qwen3-vl-8b-instruct"
-                         也可使用"Qwen/Qwen3-VL-4B-Instruct"
         
     Returns:
         tuple: 包含两个元素的元组
-            - llm: LangChain LLM对象或原生OpenAI客户端
+            - llm: LangChain LLM对象
             - model_name (str): 实际使用的模型名称
             
 
     """
     print("初始化 Qwen3-VL 客户端...")
 
-    if LANGCHAIN_AVAILABLE:
-        # 使用LangChain的ChatOpenAI接口
-        llm = ChatOpenAI(
-            api_key=api_key,
-            # 阿里云DashScope的兼容模式端点
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
-            model=model_name,
-            temperature=0.1,       # 低温度，答案更稳定
-            max_tokens=128        # 最大生成128个token
-        )
-        print(f"LangChain客户端已创建，使用模型: {model_name}")
-    else:
-        # 降级使用原生OpenAI客户端
-        from openai import OpenAI
-        llm = OpenAI(
-            api_key=api_key,
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
-        )
-        print(f"原生OpenAI客户端已创建，使用模型: {model_name}")
+
+    # 使用LangChain的ChatOpenAI接口
+    llm = ChatOpenAI(
+        api_key=api_key,
+        # 阿里云DashScope的兼容模式端点
+        base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+        model=model_name,
+        temperature=0.1,       # 低温度，答案更稳定
+        max_tokens=128        # 最大生成128个token
+    )
+    print(f"LangChain客户端已创建，使用模型: {model_name}")
+
 
     return llm, model_name
 
@@ -335,39 +303,18 @@ def vqa_inference(llm, model_name, image_path, question):
         # 要求模型简短回答关键信息
         full_question = f"{question}\n请简短回答，只回答关键信息，不需要解释。"
 
-        if LANGCHAIN_AVAILABLE:
-            # 使用LangChain接口
-            # HumanMessage支持多模态内容（文本+图像）
-            message = HumanMessage(
-                content=[
-                    {"type": "text", "text": full_question},
-                    {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
-                ]
-            )
-            # 调用模型生成答案
-            response = llm.invoke([message])
-            # 提取答案内容并去除首尾空白
-            return response.content.strip()
-        else:
-            # 使用原生OpenAI API
-            messages = [
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}},
-                        {"type": "text", "text": full_question}
-                    ]
-                }
+        # HumanMessage支持多模态内容（文本+图像）
+        message = HumanMessage(
+            content=[
+                {"type": "text", "text": full_question},
+                {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
             ]
-            # 调用chat completions API
-            response = llm.chat.completions.create(
-                model=model_name,
-                messages=messages,
-                max_tokens=128,
-                temperature=0.1
-            )
-            # 提取答案内容
-            return response.choices[0].message.content.strip()
+        )
+        # 调用模型生成答案
+        response = llm.invoke([message])
+        # 提取答案内容并去除首尾空白
+        return response.content.strip()
+
 
     except Exception as e:
         # 捕获API调用异常
@@ -535,7 +482,6 @@ def compute_exact_match(pred, targets):
         
     Returns:
         bool: 如果有任何一个标准答案与预测完全匹配，返回True
-        
 
     """
     # 标准化预测答案
@@ -566,13 +512,7 @@ def compute_fuzzy_match(pred, targets):
         
     Returns:
         bool: 如果满足任一匹配条件，返回True
-        
-    词汇重叠度计算：
-        overlap_ratio = |预测词汇 ∩ 标准词汇| / |标准词汇|
-        
-    使用示例：
-        is_correct = compute_fuzzy_match("a black cat", ["cat", "black cat"])
-        # 返回 True（满足子串匹配）
+
     """
     # 标准化预测答案
     pred_norm = normalize_answer(pred)
@@ -679,7 +619,6 @@ def create_category_chart(category_stats, output_dir):
         - 绿色：准确率 > 50%（良好）
         - 橙色：30% < 准确率 <= 50%（一般）
         - 红色：准确率 <= 30%（需改进）
-        
 
     """
     # 提取数据
@@ -843,7 +782,6 @@ def get_pil_font(size):
         
     Returns:
         ImageFont: PIL字体对象，如果都不可用则返回默认字体
-        
 
     """
     font_candidates = []
