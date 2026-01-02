@@ -944,7 +944,7 @@ def create_retrieval_comparison(query_text, results, image_folder, output_path):
         # 绘制排名和相似度
         label_y = 20
         label_text = f"排名 {result['rank']}"
-        draw.text((x_offset + 20, label_text), label_text, fill=(0, 0, 0), font=title_font)
+        draw.text((x_offset + 20, label_y), label_text, fill=(0, 0, 0), font=title_font)
         
         score_y = label_y + font_size + 10
         score_text = f"相似度: {result['similarity']:.3f}"

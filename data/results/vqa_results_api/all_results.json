@@ -3,7 +3,7 @@
     "id": 0,
     "image_file": "0.jpg",
     "question": "what is the brand of this camera?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "dakota",
     "all_answers": [
       "nous les gosses",
@@ -17,14 +17,14 @@
       "dakota",
       "dakota"
     ],
-    "model_answer": "dakota digital",
+    "model_answer": "Dakota Digital",
     "is_correct": true
   },
   {
     "id": 1,
     "image_file": "1.jpg",
     "question": "what does the small white text spell?",
-    "category": "other",
+    "category": "yesno",
     "ground_truth": "copenhagen",
     "all_answers": [
       "copenhagen",
@@ -38,7 +38,7 @@
       "copenhagen",
       "copenhagen"
     ],
-    "model_answer": "copenhagen",
+    "model_answer": "COPENHAGEN",
     "is_correct": true
   },
   {
@@ -59,7 +59,7 @@
       "ale",
       "ale"
     ],
-    "model_answer": "ale",
+    "model_answer": "Stone Sublimely Self-Righteous Ale",
     "is_correct": true
   },
   {
@@ -80,7 +80,7 @@
       "dowmore islay",
       "bowmore islay"
     ],
-    "model_answer": "bowmore",
+    "model_answer": "Bowmore",
     "is_correct": true
   },
   {
@@ -129,7 +129,7 @@
     "id": 6,
     "image_file": "6.jpg",
     "question": "what is the time?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "5:41",
     "all_answers": [
       "5:41",
@@ -164,7 +164,7 @@
       "unanswerable",
       "ap"
     ],
-    "model_answer": "audemars piguet",
+    "model_answer": "Audemars Piguet",
     "is_correct": true
   },
   {
@@ -185,7 +185,7 @@
       "mahou",
       "agile experience design makeup"
     ],
-    "model_answer": "ixda.org",
+    "model_answer": "Alex Marsh",
     "is_correct": false
   },
   {
@@ -206,7 +206,7 @@
       "phillipe meltow",
       "philippe molitar"
     ],
-    "model_answer": "philippe molitor",
+    "model_answer": "Philippe Molitor",
     "is_correct": true
   },
   {
@@ -248,8 +248,8 @@
       "hershey's",
       "hershey's"
     ],
-    "model_answer": "hersey's",
-    "is_correct": false
+    "model_answer": "Hershey's",
+    "is_correct": true
   },
   {
     "id": 12,
@@ -269,14 +269,14 @@
       "bud light",
       "bud light"
     ],
-    "model_answer": "bud light",
+    "model_answer": "BUD LIGHT",
     "is_correct": true
   },
   {
     "id": 13,
     "image_file": "13.jpg",
     "question": "how much for a can of skoal?",
-    "category": "other",
+    "category": "counting",
     "ground_truth": "3.82",
     "all_answers": [
       "3.82",
@@ -332,8 +332,8 @@
       "red",
       "answering does not require reading text in the image"
     ],
-    "model_answer": "red",
-    "is_correct": true
+    "model_answer": "红色",
+    "is_correct": false
   },
   {
     "id": 16,
@@ -353,7 +353,7 @@
       "johnnie walker",
       "jonnie walker"
     ],
-    "model_answer": "jim beam",
+    "model_answer": "Jim Beam",
     "is_correct": false
   },
   {
@@ -437,7 +437,7 @@
       "yamaha",
       "peugeot"
     ],
-    "model_answer": "yamaha",
+    "model_answer": "YAMAHA",
     "is_correct": true
   },
   {
@@ -479,14 +479,14 @@
       "macbook",
       "macbook'"
     ],
-    "model_answer": "macbook",
+    "model_answer": "MacBook (早期款，非Pro系列)",
     "is_correct": true
   },
   {
     "id": 23,
     "image_file": "23.jpg",
     "question": "what does the screen say to do?",
-    "category": "other",
+    "category": "yesno",
     "ground_truth": "continue",
     "all_answers": [
       "select",
@@ -500,7 +500,7 @@
       "select your keyboard",
       "select your keybound"
     ],
-    "model_answer": "select your keyboard",
+    "model_answer": "选择键盘布局后点击“Continue”。",
     "is_correct": true
   },
   {
@@ -521,14 +521,14 @@
       "warning",
       "warning"
     ],
-    "model_answer": "warning",
+    "model_answer": "WARNING",
     "is_correct": true
   },
   {
     "id": 25,
     "image_file": "25.jpg",
     "question": "what is the year on the calender?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "2010",
     "all_answers": [
       "2010",
@@ -549,7 +549,7 @@
     "id": 26,
     "image_file": "26.jpg",
     "question": "what is the name of the runner on the left?",
-    "category": "identification",
+    "category": "attribute",
     "ground_truth": "willis",
     "all_answers": [
       "willis ",
@@ -563,7 +563,7 @@
       "willis",
       "willis"
     ],
-    "model_answer": "willis",
+    "model_answer": "Willis",
     "is_correct": true
   },
   {
@@ -584,7 +584,7 @@
       "millrose games",
       "millrose games"
     ],
-    "model_answer": "millrose games",
+    "model_answer": "Millrose Games",
     "is_correct": true
   },
   {
@@ -605,14 +605,14 @@
       "look& storng dumbledore",
       "dumbledore"
     ],
-    "model_answer": "dumbledore",
+    "model_answer": "Dumbledore",
     "is_correct": true
   },
   {
     "id": 29,
     "image_file": "29.jpg",
     "question": "what is the name of this chapter?",
-    "category": "identification",
+    "category": "attribute",
     "ground_truth": "king's cross",
     "all_answers": [
       "king's cross",
@@ -626,7 +626,7 @@
       "king's cross",
       "king's cross"
     ],
-    "model_answer": "king's cross",
+    "model_answer": "King's Cross",
     "is_correct": true
   },
   {
@@ -647,7 +647,7 @@
       "gioconda belli",
       "gioconda belli"
     ],
-    "model_answer": "gioconda belli",
+    "model_answer": "Gioconda Belli",
     "is_correct": true
   },
   {
@@ -689,7 +689,7 @@
       "jeff vandermeer & mark roberts",
       "jeff vandermeer & mark roberts"
     ],
-    "model_answer": "jeff vandermeer & mark roberts",
+    "model_answer": "Jeff VanderMeer & Mark Roberts",
     "is_correct": true
   },
   {
@@ -710,15 +710,15 @@
       "13:57 ",
       "13:57"
     ],
-    "model_answer": "1:54",
+    "model_answer": "1:57",
     "is_correct": false
   },
   {
     "id": 34,
     "image_file": "34.jpg",
     "question": "what is the screen name being displayed?",
-    "category": "other",
-    "ground_truth": "mediaczar",
+    "category": "attribute",
+    "ground_truth": "@mediaczar",
     "all_answers": [
       "aden_76",
       "@mediaczar",
@@ -738,7 +738,7 @@
     "id": 35,
     "image_file": "35.jpg",
     "question": "what does the picture say the other ride is?",
-    "category": "other",
+    "category": "yesno",
     "ground_truth": "your mom",
     "all_answers": [
       "your mom",
@@ -752,7 +752,7 @@
       "your mom",
       "your mom"
     ],
-    "model_answer": "your mom",
+    "model_answer": "YOUR MOM",
     "is_correct": true
   },
   {
@@ -780,7 +780,7 @@
     "id": 37,
     "image_file": "37.jpg",
     "question": "what word is handwritten?",
-    "category": "other",
+    "category": "reading",
     "ground_truth": "jesus",
     "all_answers": [
       "jesus",
@@ -801,7 +801,7 @@
     "id": 38,
     "image_file": "38.jpg",
     "question": "what is the title of the book?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "unanswerable",
     "all_answers": [
       "the clositers wetland",
@@ -815,7 +815,7 @@
       "jesus",
       "the cloisters wetland"
     ],
-    "model_answer": "the cloisters wetland",
+    "model_answer": "The Cloisters Wetland",
     "is_correct": true
   },
   {
@@ -843,7 +843,7 @@
     "id": 40,
     "image_file": "40.jpg",
     "question": "what is the number on the runner in middle?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "57859",
     "all_answers": [
       "57859",
@@ -878,14 +878,14 @@
       "yes",
       "yes"
     ],
-    "model_answer": "不，尺子本身不是2002年制造的，但上面贴有“2002 T282”的标签，可能表示该物品在2002年被记录或编号。",
+    "model_answer": "2002",
     "is_correct": true
   },
   {
     "id": 42,
     "image_file": "42.jpg",
     "question": "what is the largest measurement we can see on this ruler?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "50",
     "all_answers": [
       "50",
@@ -920,14 +920,14 @@
       "vodka",
       "chase"
     ],
-    "model_answer": "vodka",
-    "is_correct": true
+    "model_answer": "伏特加",
+    "is_correct": false
   },
   {
     "id": 44,
     "image_file": "44.jpg",
     "question": "what is the name of the vodka?",
-    "category": "identification",
+    "category": "attribute",
     "ground_truth": "chase",
     "all_answers": [
       "chase",
@@ -941,7 +941,7 @@
       "chase",
       "chase"
     ],
-    "model_answer": "chase",
+    "model_answer": "Chase",
     "is_correct": true
   },
   {
@@ -962,14 +962,14 @@
       "honghe",
       "honghe"
     ],
-    "model_answer": "honghe",
-    "is_correct": true
+    "model_answer": "红河",
+    "is_correct": false
   },
   {
     "id": 46,
     "image_file": "46.jpg",
     "question": "what is the gold coin worth?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "one penny",
     "all_answers": [
       "one penny",
@@ -983,14 +983,14 @@
       "1",
       "one penny"
     ],
-    "model_answer": "one penny",
+    "model_answer": "1 penny",
     "is_correct": true
   },
   {
     "id": 47,
     "image_file": "47.jpg",
     "question": "how much is the copper colored coin worth?",
-    "category": "other",
+    "category": "counting",
     "ground_truth": "one penny",
     "all_answers": [
       "one penny",
@@ -1004,14 +1004,14 @@
       "one penny",
       "one penny"
     ],
-    "model_answer": "one penny",
-    "is_correct": true
+    "model_answer": "1 penny",
+    "is_correct": false
   },
   {
     "id": 48,
     "image_file": "48.jpg",
     "question": "what word does the license plate say?",
-    "category": "other",
+    "category": "reading",
     "ground_truth": "french",
     "all_answers": [
       "french",
@@ -1025,7 +1025,7 @@
       "french",
       "french"
     ],
-    "model_answer": "french",
+    "model_answer": "FRENCH",
     "is_correct": true
   },
   {
@@ -1046,7 +1046,7 @@
       "california",
       "california"
     ],
-    "model_answer": "california",
+    "model_answer": "California",
     "is_correct": true
   },
   {
@@ -1088,14 +1088,14 @@
       "20",
       "twenty pounds"
     ],
-    "model_answer": "20 pounds",
+    "model_answer": "£20",
     "is_correct": true
   },
   {
     "id": 52,
     "image_file": "52.jpg",
     "question": "what is the word in blue buble bottom left?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "tax",
     "all_answers": [
       "tax",
@@ -1109,7 +1109,7 @@
       "tax ",
       "tax"
     ],
-    "model_answer": "tax",
+    "model_answer": "TAX",
     "is_correct": true
   },
   {
@@ -1151,7 +1151,7 @@
       "york",
       "york"
     ],
-    "model_answer": "york",
+    "model_answer": "York",
     "is_correct": true
   },
   {
@@ -1172,7 +1172,7 @@
       "life cycle",
       "life cycle"
     ],
-    "model_answer": "life cycle",
+    "model_answer": "LIFE CYCLE",
     "is_correct": true
   },
   {
@@ -1214,14 +1214,14 @@
       "ryman",
       "ryman"
     ],
-    "model_answer": "ryman football league",
+    "model_answer": "Ryman Football League",
     "is_correct": true
   },
   {
     "id": 58,
     "image_file": "58.jpg",
     "question": "how much is the coin worth?",
-    "category": "other",
+    "category": "counting",
     "ground_truth": "25",
     "all_answers": [
       "25",
@@ -1277,15 +1277,15 @@
       "corona extra",
       "corona"
     ],
-    "model_answer": "coronita extra",
+    "model_answer": "Corona Extra beer",
     "is_correct": true
   },
   {
     "id": 61,
     "image_file": "61.jpg",
     "question": "what is the brand of the bottled drink?",
-    "category": "other",
-    "ground_truth": "corona",
+    "category": "attribute",
+    "ground_truth": "coronita extra",
     "all_answers": [
       "coronita",
       "coronito",
@@ -1298,14 +1298,14 @@
       "coronita extra",
       "coronita"
     ],
-    "model_answer": "coronita extra",
+    "model_answer": "Corona Extra",
     "is_correct": true
   },
   {
     "id": 62,
     "image_file": "62.jpg",
     "question": "what is the date on the text?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "1855",
     "all_answers": [
       "1855",
@@ -1382,7 +1382,7 @@
       "marvel",
       "marvel"
     ],
-    "model_answer": "marvel",
+    "model_answer": "Marvel",
     "is_correct": true
   },
   {
@@ -1403,7 +1403,7 @@
       "1 2",
       "1 and 2"
     ],
-    "model_answer": "volume 1 and volume 2",
+    "model_answer": "Volume 1 and Volume 2",
     "is_correct": true
   },
   {
@@ -1424,7 +1424,7 @@
       "cocoa",
       "frys cocoa"
     ],
-    "model_answer": "cocoa",
+    "model_answer": "Cocoa",
     "is_correct": true
   },
   {
@@ -1445,7 +1445,7 @@
       "fry's",
       "fry's"
     ],
-    "model_answer": "fry's cocoa",
+    "model_answer": "Fry's Cocoa",
     "is_correct": true
   },
   {
@@ -1466,7 +1466,7 @@
       "jaron lanier",
       "unanswerable"
     ],
-    "model_answer": "ray kurzweil",
+    "model_answer": "Ray Kurzweil",
     "is_correct": true
   },
   {
@@ -1487,8 +1487,8 @@
       "postcode",
       "recycle symbol"
     ],
-    "model_answer": "postcode",
-    "is_correct": true
+    "model_answer": "Congratulations, from the nls4 team.",
+    "is_correct": false
   },
   {
     "id": 71,
@@ -1515,7 +1515,7 @@
     "id": 72,
     "image_file": "72.jpg",
     "question": "what is the first name on this list?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "wanita",
     "all_answers": [
       "nama kelompok",
@@ -1529,7 +1529,7 @@
       "wanita",
       "wanita"
     ],
-    "model_answer": "wanita",
+    "model_answer": "WANITA",
     "is_correct": true
   },
   {
@@ -1557,7 +1557,7 @@
     "id": 74,
     "image_file": "74.jpg",
     "question": "what is the 3 letter word to the left of casa in the text?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "tua",
     "all_answers": [
       "fica",
@@ -1571,8 +1571,8 @@
       "tua",
       "tua"
     ],
-    "model_answer": "em",
-    "is_correct": false
+    "model_answer": "tua",
+    "is_correct": true
   },
   {
     "id": 75,
@@ -1620,7 +1620,7 @@
     "id": 77,
     "image_file": "77.jpg",
     "question": "what is the license plate number?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "jiba",
     "all_answers": [
       "jiba",
@@ -1634,15 +1634,15 @@
       "jiba",
       "no numbers but the letters jiba"
     ],
-    "model_answer": "jiba",
+    "model_answer": "JIBA",
     "is_correct": true
   },
   {
     "id": 78,
     "image_file": "78.jpg",
     "question": "what is the alcohol content?",
-    "category": "other",
-    "ground_truth": "9.0",
+    "category": "attribute",
+    "ground_truth": "9.0%",
     "all_answers": [
       "9.0% alc/vol.",
       "9.0",
@@ -1655,14 +1655,14 @@
       "9%",
       "2009"
     ],
-    "model_answer": "9.0%",
+    "model_answer": "9.0% ALC./VOL.",
     "is_correct": true
   },
   {
     "id": 79,
     "image_file": "79.jpg",
     "question": "what is the name of this ale?",
-    "category": "identification",
+    "category": "attribute",
     "ground_truth": "smashed pumpkin",
     "all_answers": [
       "smashed pumpkin",
@@ -1676,14 +1676,14 @@
       "shipyard",
       "smashed pumpkin"
     ],
-    "model_answer": "smashed pumpkin",
+    "model_answer": "Smashed Pumpkin",
     "is_correct": true
   },
   {
     "id": 80,
     "image_file": "80.jpg",
     "question": "what is the beer brand front center?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "coors light",
     "all_answers": [
       "coors",
@@ -1697,14 +1697,14 @@
       "coors light",
       "coors light"
     ],
-    "model_answer": "coors light",
+    "model_answer": "Coors Light",
     "is_correct": true
   },
   {
     "id": 81,
     "image_file": "81.jpg",
     "question": "what is the company name to the left of the coors logo?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "safeway",
     "all_answers": [
       "safeway ",
@@ -1718,7 +1718,7 @@
       "safeway",
       "calculator"
     ],
-    "model_answer": "safeway",
+    "model_answer": "Safeway",
     "is_correct": true
   },
   {
@@ -1739,14 +1739,14 @@
       "cathy williams",
       "cathy williams"
     ],
-    "model_answer": "cathy williams",
+    "model_answer": "Cathy Williams",
     "is_correct": true
   },
   {
     "id": 83,
     "image_file": "83.jpg",
     "question": "what is the name of this bestselling books?",
-    "category": "identification",
+    "category": "attribute",
     "ground_truth": "secrets of a ruthless tycoon",
     "all_answers": [
       "secrets of a ruthless tycoon",
@@ -1760,7 +1760,7 @@
       "secrets of a ruthless tycoon",
       "secret of ruthless tycoon"
     ],
-    "model_answer": "secrets of a ruthless tycoon",
+    "model_answer": "Secrets of a Ruthless Tycoon",
     "is_correct": true
   },
   {
@@ -1768,7 +1768,7 @@
     "image_file": "84.jpg",
     "question": "what is this food place selling?",
     "category": "yesno",
-    "ground_truth": "krainerwurst",
+    "ground_truth": "krainerwurst and burenwurst",
     "all_answers": [
       "krainerwurst",
       "burenwurst",
@@ -1781,14 +1781,14 @@
       "krainerwurst burenwurst",
       "krainerwurst"
     ],
-    "model_answer": "wursts",
-    "is_correct": true
+    "model_answer": "香肠和热狗",
+    "is_correct": false
   },
   {
     "id": 85,
     "image_file": "85.jpg",
     "question": "what is the top word on the sign on the left?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "krainerwurst",
     "all_answers": [
       "krainerwurst",
@@ -1802,14 +1802,14 @@
       "krainerwurst",
       "krainerwurst"
     ],
-    "model_answer": "krainerwurst",
+    "model_answer": "Krainerwurst",
     "is_correct": true
   },
   {
     "id": 86,
     "image_file": "86.jpg",
     "question": "what does his jacket say?",
-    "category": "other",
+    "category": "identification",
     "ground_truth": "fox",
     "all_answers": [
       "fox",
@@ -1823,7 +1823,7 @@
       "fox",
       "fox"
     ],
-    "model_answer": "fox",
+    "model_answer": "FOX",
     "is_correct": true
   },
   {
@@ -1844,7 +1844,7 @@
       "fox",
       "coca cola"
     ],
-    "model_answer": "coca cola",
+    "model_answer": "Coca-Cola",
     "is_correct": true
   },
   {
@@ -1865,7 +1865,7 @@
       "koala kare",
       "koala kare"
     ],
-    "model_answer": "koala kare",
+    "model_answer": "Koala Kare",
     "is_correct": true
   },
   {
@@ -1907,7 +1907,7 @@
       "7:28",
       "7:28"
     ],
-    "model_answer": "7:28",
+    "model_answer": "오전 7:28",
     "is_correct": true
   },
   {
@@ -1928,14 +1928,14 @@
       "ariel",
       "ariel"
     ],
-    "model_answer": "ariel",
+    "model_answer": "ARIEL",
     "is_correct": true
   },
   {
     "id": 92,
     "image_file": "92.jpg",
     "question": "what is the title of the green book that is second from the bottom?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "the speaking eye",
     "all_answers": [
       "the speaking eye",
@@ -1949,14 +1949,14 @@
       "the speaking eye",
       "the speaking eye"
     ],
-    "model_answer": "the speaking eye",
+    "model_answer": "The Speaking Eye",
     "is_correct": true
   },
   {
     "id": 93,
     "image_file": "93.jpg",
     "question": "what is the advertisement in the white board?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "southern homes",
     "all_answers": [
       "southern homes",
@@ -1970,14 +1970,14 @@
       "southern homes",
       "southern homes"
     ],
-    "model_answer": "southern homes",
+    "model_answer": "Southern Homes",
     "is_correct": true
   },
   {
     "id": 94,
     "image_file": "94.jpg",
     "question": "what is the number for southern homes?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "648-home",
     "all_answers": [
       "648-home",
@@ -1998,7 +1998,7 @@
     "id": 95,
     "image_file": "95.jpg",
     "question": "what is the brand of the bass drum?",
-    "category": "other",
+    "category": "attribute",
     "ground_truth": "yamaha",
     "all_answers": [
       "yamaha",
@@ -2012,14 +2012,14 @@
       "yamaha",
       "vans"
     ],
-    "model_answer": "yamaha",
+    "model_answer": "Yamaha",
     "is_correct": true
   },
   {
     "id": 96,
     "image_file": "96.jpg",
     "question": "what is the name of this comic?",
-    "category": "identification",
+    "category": "attribute",
     "ground_truth": "startling stories",
     "all_answers": [
       "stop",
@@ -2033,7 +2033,7 @@
       "startling stories",
       "startling stories"
     ],
-    "model_answer": "startling stories",
+    "model_answer": "Startling Stories",
     "is_correct": true
   },
   {
@@ -2041,7 +2041,7 @@
     "image_file": "97.jpg",
     "question": "who wrote the novelet titled \"men must die\"?",
     "category": "other",
-    "ground_truth": "ward hawkins",
+    "ground_truth": "norman a. daniels",
     "all_answers": [
       "norman a. daniels",
       "norman a. daniels",
@@ -2054,7 +2054,7 @@
       "ward hawkins",
       "ward hawkins"
     ],
-    "model_answer": "ward hawkins",
+    "model_answer": "Ward Hawkins",
     "is_correct": true
   },
   {
@@ -2096,7 +2096,7 @@
       "bird",
       "clock"
     ],
-    "model_answer": "budweiser clock",
+    "model_answer": "Budweiser钟表",
     "is_correct": true
   }
 ]

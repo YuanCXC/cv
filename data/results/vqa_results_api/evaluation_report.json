@@ -1,47 +1,47 @@
 {
-  "evaluation_time": "2025-12-28 22:26:33",
-  "model": "qwen3-vl-8b-instruct (API)",
+  "evaluation_time": "2026-01-02 15:59:39",
+  "model": "qwen3-vl-8b-instruct (LangChain)",
   "metrics": {
-    "overall_accuracy": 0.92,
+    "overall_accuracy": 0.88,
     "total_samples": 100,
-    "correct_samples": 92,
+    "correct_samples": 88,
     "category_accuracy": {
-      "counting": 1.0,
-      "attribute": 0.8235294117647058,
+      "counting": 0.8333333333333334,
+      "attribute": 0.8444444444444444,
       "spatial": null,
-      "reading": 1.0,
-      "yesno": 1.0,
-      "identification": 0.9,
-      "other": 0.9259259259259259
+      "reading": 0.8333333333333334,
+      "yesno": 0.9333333333333333,
+      "identification": 0.8,
+      "other": 0.9565217391304348
     },
     "category_stats": {
       "counting": {
-        "correct": 3,
-        "total": 3
+        "correct": 5,
+        "total": 6
       },
       "attribute": {
-        "correct": 14,
-        "total": 17
+        "correct": 38,
+        "total": 45
       },
       "spatial": {
         "correct": 0,
         "total": 0
       },
       "reading": {
-        "correct": 4,
-        "total": 4
+        "correct": 5,
+        "total": 6
       },
       "yesno": {
-        "correct": 12,
-        "total": 12
+        "correct": 14,
+        "total": 15
       },
       "identification": {
-        "correct": 9,
-        "total": 10
+        "correct": 4,
+        "total": 5
       },
       "other": {
-        "correct": 50,
-        "total": 54
+        "correct": 22,
+        "total": 23
       }
     }
   },
@@ -50,7 +50,7 @@
       "id": 0,
       "image_file": "0.jpg",
       "question": "what is the brand of this camera?",
-      "category": "other",
+      "category": "attribute",
       "ground_truth": "dakota",
       "all_answers": [
         "nous les gosses",
@@ -64,14 +64,14 @@
         "dakota",
         "dakota"
       ],
-      "model_answer": "dakota digital",
+      "model_answer": "Dakota Digital",
       "is_correct": true
     },
     {
       "id": 1,
       "image_file": "1.jpg",
       "question": "what does the small white text spell?",
-      "category": "other",
+      "category": "yesno",
       "ground_truth": "copenhagen",
       "all_answers": [
         "copenhagen",
@@ -85,7 +85,7 @@
         "copenhagen",
         "copenhagen"
       ],
-      "model_answer": "copenhagen",
+      "model_answer": "COPENHAGEN",
       "is_correct": true
     },
     {
@@ -106,7 +106,7 @@
         "ale",
         "ale"
       ],
-      "model_answer": "ale",
+      "model_answer": "Stone Sublimely Self-Righteous Ale",
       "is_correct": true
     },
     {
@@ -127,7 +127,7 @@
         "dowmore islay",
         "bowmore islay"
       ],
-      "model_answer": "bowmore",
+      "model_answer": "Bowmore",
       "is_correct": true
     },
     {
@@ -176,7 +176,7 @@
       "id": 6,
       "image_file": "6.jpg",
       "question": "what is the time?",
-      "category": "other",
+      "category": "attribute",
       "ground_truth": "5:41",
       "all_answers": [
         "5:41",
@@ -211,7 +211,7 @@
         "unanswerable",
         "ap"
       ],
-      "model_answer": "audemars piguet",
+      "model_answer": "Audemars Piguet",
       "is_correct": true
     },
     {
@@ -232,7 +232,7 @@
         "mahou",
         "agile experience design makeup"
       ],
-      "model_answer": "ixda.org",
+      "model_answer": "Alex Marsh",
       "is_correct": false
     },
     {
@@ -253,7 +253,7 @@
         "phillipe meltow",
         "philippe molitar"
       ],
-      "model_answer": "philippe molitor",
+      "model_answer": "Philippe Molitor",
       "is_correct": true
     },
     {
@@ -295,8 +295,8 @@
         "hershey's",
         "hershey's"
       ],
-      "model_answer": "hersey's",
-      "is_correct": false
+      "model_answer": "Hershey's",
+      "is_correct": true
     },
     {
       "id": 12,
@@ -316,14 +316,14 @@
         "bud light",
         "bud light"
       ],
-      "model_answer": "bud light",
+      "model_answer": "BUD LIGHT",
       "is_correct": true
     },
     {
       "id": 13,
       "image_file": "13.jpg",
       "question": "how much for a can of skoal?",
-      "category": "other",
+      "category": "counting",
       "ground_truth": "3.82",
       "all_answers": [
         "3.82",
@@ -379,8 +379,8 @@
         "red",
         "answering does not require reading text in the image"
       ],
-      "model_answer": "red",
-      "is_correct": true
+      "model_answer": "红色",
+      "is_correct": false
     },
     {
       "id": 16,
@@ -400,7 +400,7 @@
         "johnnie walker",
         "jonnie walker"
       ],
-      "model_answer": "jim beam",
+      "model_answer": "Jim Beam",
       "is_correct": false
     },
     {

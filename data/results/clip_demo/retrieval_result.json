@@ -2,17 +2,17 @@
   "query": "a person",
   "results": [
     {
-      "image": "F:\\2_study\\-200_StudyPace\\Code\\python\\计算机视觉\\text01\\data\\images\\74.jpg",
+      "image": "F:\\2_study\\-200_StudyPace\\Code\\python\\计算机视觉\\VL\\data\\images\\74.jpg",
       "similarity": 0.24332067370414734,
       "rank": 1
     },
     {
-      "image": "F:\\2_study\\-200_StudyPace\\Code\\python\\计算机视觉\\text01\\data\\images\\68.jpg",
+      "image": "F:\\2_study\\-200_StudyPace\\Code\\python\\计算机视觉\\VL\\data\\images\\68.jpg",
       "similarity": 0.22917133569717407,
       "rank": 2
     },
     {
-      "image": "F:\\2_study\\-200_StudyPace\\Code\\python\\计算机视觉\\text01\\data\\images\\67.jpg",
+      "image": "F:\\2_study\\-200_StudyPace\\Code\\python\\计算机视觉\\VL\\data\\images\\67.jpg",
       "similarity": 0.22917133569717407,
       "rank": 3
     }

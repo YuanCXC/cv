@@ -129,7 +129,7 @@ def compute_clip_similarity(image_path, candidates):
             # logits_per_image: (1, num_candidates)
             logits = outputs.logits_per_image
             
-            # 通过softmax转换为概率分布
+            # 通过softmax转换为概率分布，NumPy 数组仅支持 CPU 数据
             probs = torch.softmax(logits, dim=1).cpu().numpy().flatten()
 
         return probs.tolist()
