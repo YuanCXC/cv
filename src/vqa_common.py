@@ -83,6 +83,7 @@ def find_chinese_font():
     # 纯中文字体名称列表（不区分大小写匹配）
     # 这些是常见的中文字体变体名称
     chinese_font_names = [
+
         'Microsoft YaHei', 'MicrosoftYaHei', 'msyh',   # 微软雅黑
         'SimHei', 'simhei', 'hei',                     # 黑体
         'Noto Sans CJK SC', 'NotoSansCJKsc',          # Google Noto
@@ -244,7 +245,7 @@ def load_model(api_key, model_name="qwen3-vl-8b-instruct"):
         tuple: 包含两个元素的元组
             - llm: LangChain LLM对象
             - model_name (str): 实际使用的模型名称
-            
+
 
     """
     print("初始化 Qwen3-VL 客户端...")
