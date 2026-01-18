@@ -1,0 +1,11 @@
+[
+  {
+    "model": "qwen3-vl-8b",
+    "mode": "baseline_oneshot",
+    "samples": 100,
+    "accuracy_vqa": 0.7999999999999998,
+    "accuracy_em": 0.84,
+    "avg_latency": 1.7273511838912965,
+    "timestamp": "2026-01-15 19:14:00"
+  }
+]

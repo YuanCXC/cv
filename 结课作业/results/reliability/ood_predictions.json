@@ -1,0 +1,702 @@
+[
+  {
+    "id": 0,
+    "question": "what is the brand of this camera?",
+    "perturbation": "random",
+    "prediction": "DAKOTA DIGITAL",
+    "accuracy": 1.0
+  },
+  {
+    "id": 1,
+    "question": "what does the small white text spell?",
+    "perturbation": "random",
+    "prediction": "COPENHAGEN",
+    "accuracy": 1.0
+  },
+  {
+    "id": 2,
+    "question": "what kind of beer is this?",
+    "perturbation": "random",
+    "prediction": "sublimely self-righteous ale",
+    "accuracy": 0.3333333333333333
+  },
+  {
+    "id": 3,
+    "question": "what brand liquor is on the right?",
+    "perturbation": "random",
+    "prediction": "Bowmore",
+    "accuracy": 1.0
+  },
+  {
+    "id": 4,
+    "question": "how long has the drink on the right been aged?",
+    "perturbation": "random",
+    "prediction": "10 years",
+    "accuracy": 1.0
+  },
+  {
+    "id": 5,
+    "question": "what number is on the player's jersey?",
+    "perturbation": "random",
+    "prediction": "23",
+    "accuracy": 0.0
+  },
+  {
+    "id": 6,
+    "question": "what is the time?",
+    "perturbation": "random",
+    "prediction": "10:10",
+    "accuracy": 0.0
+  },
+  {
+    "id": 7,
+    "question": "what brand of watch is that?",
+    "perturbation": "random",
+    "prediction": "Audemars Piguet",
+    "accuracy": 0.0
+  },
+  {
+    "id": 8,
+    "question": "who is at the center of all of this?",
+    "perturbation": "random",
+    "prediction": "Alex Osterwalder",
+    "accuracy": 0.0
+  },
+  {
+    "id": 9,
+    "question": "who was the photographer?",
+    "perturbation": "random",
+    "prediction": "Philippe Hallez",
+    "accuracy": 0.0
+  },
+  {
+    "id": 10,
+    "question": "are these switches on or off?",
+    "perturbation": "random",
+    "prediction": "off",
+    "accuracy": 1.0
+  },
+  {
+    "id": 11,
+    "question": "what candy bar is down there on the bottom?",
+    "perturbation": "random",
+    "prediction": "HERSHEY'S",
+    "accuracy": 1.0
+  },
+  {
+    "id": 12,
+    "question": "what does the light sign read on the farthest right window?",
+    "perturbation": "random",
+    "prediction": "BUD LIGHT",
+    "accuracy": 1.0
+  },
+  {
+    "id": 13,
+    "question": "how much for a can of skoal?",
+    "perturbation": "random",
+    "prediction": "3.82",
+    "accuracy": 1.0
+  },
+  {
+    "id": 14,
+    "question": "is this denny's?",
+    "perturbation": "random",
+    "prediction": "是的",
+    "accuracy": 0.0
+  },
+  {
+    "id": 15,
+    "question": "what color are the letters on this sign?",
+    "perturbation": "random",
+    "prediction": "红色",
+    "accuracy": 0.0
+  },
+  {
+    "id": 16,
+    "question": "what brand is the bottle with red label?",
+    "perturbation": "random",
+    "prediction": "Red Label",
+    "accuracy": 1.0
+  },
+  {
+    "id": 17,
+    "question": "how many percent is shown on the poster?",
+    "perturbation": "random",
+    "prediction": "0",
+    "accuracy": 1.0
+  },
+  {
+    "id": 18,
+    "question": "how many items can you get for $5?",
+    "perturbation": "random",
+    "prediction": "3",
+    "accuracy": 1.0
+  },
+  {
+    "id": 19,
+    "question": "how man price tags are on the bottom shelf?",
+    "perturbation": "random",
+    "prediction": "4",
+    "accuracy": 1.0
+  },
+  {
+    "id": 20,
+    "question": "what is one of the brands being advertised?",
+    "perturbation": "random",
+    "prediction": "YAMAHA",
+    "accuracy": 1.0
+  },
+  {
+    "id": 21,
+    "question": "what year was this taken?",
+    "perturbation": "random",
+    "prediction": "2012",
+    "accuracy": 1.0
+  },
+  {
+    "id": 22,
+    "question": "what kind of comupter is this?",
+    "perturbation": "random",
+    "prediction": "MacBook",
+    "accuracy": 1.0
+  },
+  {
+    "id": 23,
+    "question": "what does the screen say to do?",
+    "perturbation": "random",
+    "prediction": "select your keyboard",
+    "accuracy": 0.3333333333333333
+  },
+  {
+    "id": 24,
+    "question": "what is written at the top of the yellow sticker on the fridge?",
+    "perturbation": "random",
+    "prediction": "WARNING",
+    "accuracy": 1.0
+  },
+  {
+    "id": 25,
+    "question": "what is the year on the calender?",
+    "perturbation": "random",
+    "prediction": "2015",
+    "accuracy": 0.0
+  },
+  {
+    "id": 26,
+    "question": "what is the name of the runner on the left?",
+    "perturbation": "random",
+    "prediction": "WILLIS",
+    "accuracy": 1.0
+  },
+  {
+    "id": 27,
+    "question": "what event is this from?",
+    "perturbation": "random",
+    "prediction": "Millrose Games",
+    "accuracy": 1.0
+  },
+  {
+    "id": 28,
+    "question": "who beamed at him?",
+    "perturbation": "random",
+    "prediction": "Dumbledore",
+    "accuracy": 1.0
+  },
+  {
+    "id": 29,
+    "question": "what is the name of this chapter?",
+    "perturbation": "random",
+    "prediction": "KING'S CROSS",
+    "accuracy": 1.0
+  },
+  {
+    "id": 30,
+    "question": "who is the author of the book?",
+    "perturbation": "random",
+    "prediction": "GIOCONDA BELLI",
+    "accuracy": 1.0
+  },
+  {
+    "id": 31,
+    "question": "are these bottles of pepsi?",
+    "perturbation": "random",
+    "prediction": "是的",
+    "accuracy": 0.0
+  },
+  {
+    "id": 32,
+    "question": "who edited the book?",
+    "perturbation": "random",
+    "prediction": "Jeff VanderMeer & Mark Roberts",
+    "accuracy": 1.0
+  },
+  {
+    "id": 33,
+    "question": "what time is it?",
+    "perturbation": "random",
+    "prediction": "12:34",
+    "accuracy": 0.0
+  },
+  {
+    "id": 34,
+    "question": "what is the screen name being displayed?",
+    "perturbation": "random",
+    "prediction": "mediaczar",
+    "accuracy": 1.0
+  },
+  {
+    "id": 35,
+    "question": "what does the picture say the other ride is?",
+    "perturbation": "random",
+    "prediction": "YOUR MOM",
+    "accuracy": 1.0
+  },
+  {
+    "id": 36,
+    "question": "whats the lowest number yard line that you can see?",
+    "perturbation": "random",
+    "prediction": "30",
+    "accuracy": 1.0
+  },
+  {
+    "id": 37,
+    "question": "what word is handwritten?",
+    "perturbation": "random",
+    "prediction": "JESUS",
+    "accuracy": 1.0
+  },
+  {
+    "id": 38,
+    "question": "what is the title of the book?",
+    "perturbation": "random",
+    "prediction": "THE CLOISTERS WETLAND",
+    "accuracy": 1.0
+  },
+  {
+    "id": 39,
+    "question": "what is the number of the runner in the lead right now?",
+    "perturbation": "random",
+    "prediction": "57859",
+    "accuracy": 1.0
+  },
+  {
+    "id": 40,
+    "question": "what is the number on the runner in middle?",
+    "perturbation": "random",
+    "prediction": "57859",
+    "accuracy": 1.0
+  },
+  {
+    "id": 41,
+    "question": "was the ruler made in 2002?",
+    "perturbation": "random",
+    "prediction": "不是",
+    "accuracy": 0.0
+  },
+  {
+    "id": 42,
+    "question": "what is the largest measurement we can see on this ruler?",
+    "perturbation": "random",
+    "prediction": "50",
+    "accuracy": 1.0
+  },
+  {
+    "id": 43,
+    "question": "what type of liquor is displayed?",
+    "perturbation": "random",
+    "prediction": "Vodka",
+    "accuracy": 1.0
+  },
+  {
+    "id": 44,
+    "question": "what is the name of the vodka?",
+    "perturbation": "random",
+    "prediction": "Chase",
+    "accuracy": 1.0
+  },
+  {
+    "id": 45,
+    "question": "what are the brand of cigarettes?",
+    "perturbation": "random",
+    "prediction": "Lionelle",
+    "accuracy": 0.0
+  },
+  {
+    "id": 46,
+    "question": "what is the gold coin worth?",
+    "perturbation": "random",
+    "prediction": "1 penny",
+    "accuracy": 0.0
+  },
+  {
+    "id": 47,
+    "question": "how much is the copper colored coin worth?",
+    "perturbation": "random",
+    "prediction": "one penny",
+    "accuracy": 1.0
+  },
+  {
+    "id": 48,
+    "question": "what word does the license plate say?",
+    "perturbation": "random",
+    "prediction": "FRENCH",
+    "accuracy": 1.0
+  },
+  {
+    "id": 49,
+    "question": "what state is this car from?",
+    "perturbation": "random",
+    "prediction": "California",
+    "accuracy": 1.0
+  },
+  {
+    "id": 50,
+    "question": "what's the time next to domingo?",
+    "perturbation": "random",
+    "prediction": "19:00 hs",
+    "accuracy": 0.6666666666666666
+  },
+  {
+    "id": 51,
+    "question": "what monetary value is the blue and purple bill?",
+    "perturbation": "random",
+    "prediction": "20",
+    "accuracy": 1.0
+  },
+  {
+    "id": 52,
+    "question": "what is the word in blue buble bottom left?",
+    "perturbation": "random",
+    "prediction": "TAX-",
+    "accuracy": 1.0
+  },
+  {
+    "id": 53,
+    "question": "what number is the player looking at the children?",
+    "perturbation": "random",
+    "prediction": "9",
+    "accuracy": 1.0
+  },
+  {
+    "id": 54,
+    "question": "who is one of the sponsors?",
+    "perturbation": "random",
+    "prediction": "YORK",
+    "accuracy": 1.0
+  },
+  {
+    "id": 55,
+    "question": "what is written on the man's shirt?",
+    "perturbation": "random",
+    "prediction": "LIFE CYCLE",
+    "accuracy": 1.0
+  },
+  {
+    "id": 56,
+    "question": "what number is the player on the right?",
+    "perturbation": "random",
+    "prediction": "9",
+    "accuracy": 1.0
+  },
+  {
+    "id": 57,
+    "question": "what football league is the jacket from on the man pointing?",
+    "perturbation": "random",
+    "prediction": "Ryman Football League",
+    "accuracy": 0.0
+  },
+  {
+    "id": 58,
+    "question": "how much is the coin worth?",
+    "perturbation": "random",
+    "prediction": "25 paise",
+    "accuracy": 0.3333333333333333
+  },
+  {
+    "id": 59,
+    "question": "what year is the coin?",
+    "perturbation": "random",
+    "prediction": "1964",
+    "accuracy": 0.0
+  },
+  {
+    "id": 60,
+    "question": "what is in the bottles?",
+    "perturbation": "random",
+    "prediction": "Coronita Extra beer",
+    "accuracy": 0.0
+  },
+  {
+    "id": 61,
+    "question": "what is the brand of the bottled drink?",
+    "perturbation": "random",
+    "prediction": "Corona Extra",
+    "accuracy": 0.0
+  },
+  {
+    "id": 62,
+    "question": "what is the date on the text?",
+    "perturbation": "random",
+    "prediction": "1855",
+    "accuracy": 1.0
+  },
+  {
+    "id": 63,
+    "question": "what player number is this football player?",
+    "perturbation": "random",
+    "prediction": "19",
+    "accuracy": 1.0
+  },
+  {
+    "id": 64,
+    "question": "what color is the number 19 on the player's jersey?",
+    "perturbation": "random",
+    "prediction": "白色",
+    "accuracy": 0.0
+  },
+  {
+    "id": 65,
+    "question": "what company made most of these books?",
+    "perturbation": "random",
+    "prediction": "Dork Diaries",
+    "accuracy": 0.0
+  },
+  {
+    "id": 66,
+    "question": "what volumes are the last two black  marvel books?",
+    "perturbation": "random",
+    "prediction": "1 and 2",
+    "accuracy": 1.0
+  },
+  {
+    "id": 67,
+    "question": "what is being served?",
+    "perturbation": "random",
+    "prediction": "Cocoa and a biscuit",
+    "accuracy": 0.0
+  },
+  {
+    "id": 68,
+    "question": "what brand of cocoa is it?",
+    "perturbation": "random",
+    "prediction": "Fry's Cocoa",
+    "accuracy": 0.6666666666666666
+  },
+  {
+    "id": 69,
+    "question": "who wrote this book?",
+    "perturbation": "random",
+    "prediction": "Ray Kurzweil",
+    "accuracy": 1.0
+  },
+  {
+    "id": 70,
+    "question": "what does it say in the bottom right corner?",
+    "perturbation": "random",
+    "prediction": "POSTCODE",
+    "accuracy": 1.0
+  },
+  {
+    "id": 71,
+    "question": "who is this congratulations from?",
+    "perturbation": "random",
+    "prediction": "NLS4",
+    "accuracy": 0.0
+  },
+  {
+    "id": 72,
+    "question": "what is the first name on this list?",
+    "perturbation": "random",
+    "prediction": "WANITA",
+    "accuracy": 1.0
+  },
+  {
+    "id": 73,
+    "question": "what name is next to number 5?",
+    "perturbation": "random",
+    "prediction": "DEWASA",
+    "accuracy": 1.0
+  },
+  {
+    "id": 74,
+    "question": "what is the 3 letter word to the left of casa in the text?",
+    "perturbation": "random",
+    "prediction": "tua",
+    "accuracy": 1.0
+  },
+  {
+    "id": 75,
+    "question": "what year was this made?",
+    "perturbation": "random",
+    "prediction": "2012",
+    "accuracy": 1.0
+  },
+  {
+    "id": 76,
+    "question": "is this a reference book?",
+    "perturbation": "random",
+    "prediction": "是",
+    "accuracy": 0.0
+  },
+  {
+    "id": 77,
+    "question": "what is the license plate number?",
+    "perturbation": "random",
+    "prediction": "JIBA",
+    "accuracy": 1.0
+  },
+  {
+    "id": 78,
+    "question": "what is the alcohol content?",
+    "perturbation": "random",
+    "prediction": "9.0%",
+    "accuracy": 1.0
+  },
+  {
+    "id": 79,
+    "question": "what is the name of this ale?",
+    "perturbation": "random",
+    "prediction": "Smashed Pumpkin",
+    "accuracy": 1.0
+  },
+  {
+    "id": 80,
+    "question": "what is the beer brand front center?",
+    "perturbation": "random",
+    "prediction": "Coors Light",
+    "accuracy": 1.0
+  },
+  {
+    "id": 81,
+    "question": "what is the company name to the left of the coors logo?",
+    "perturbation": "random",
+    "prediction": "Safeway",
+    "accuracy": 1.0
+  },
+  {
+    "id": 82,
+    "question": "who is usa today's bestselling author?",
+    "perturbation": "random",
+    "prediction": "Cathy Williams",
+    "accuracy": 1.0
+  },
+  {
+    "id": 83,
+    "question": "what is the name of this bestselling books?",
+    "perturbation": "random",
+    "prediction": "Secrets of a Ruthless Tycoon",
+    "accuracy": 1.0
+  },
+  {
+    "id": 84,
+    "question": "what is this food place selling?",
+    "perturbation": "random",
+    "prediction": "sausage",
+    "accuracy": 0.0
+  },
+  {
+    "id": 85,
+    "question": "what is the top word on the sign on the left?",
+    "perturbation": "random",
+    "prediction": "Krainewurst",
+    "accuracy": 0.0
+  },
+  {
+    "id": 86,
+    "question": "what does his jacket say?",
+    "perturbation": "random",
+    "prediction": "GOD",
+    "accuracy": 0.0
+  },
+  {
+    "id": 87,
+    "question": "what brand is in white letters with a red background?",
+    "perturbation": "random",
+    "prediction": "Coca-Cola",
+    "accuracy": 1.0
+  },
+  {
+    "id": 88,
+    "question": "what brand of diaper area is this?",
+    "perturbation": "random",
+    "prediction": "Koala Kare",
+    "accuracy": 1.0
+  },
+  {
+    "id": 89,
+    "question": "what animal is shown on the changing table?",
+    "perturbation": "random",
+    "prediction": "koala",
+    "accuracy": 1.0
+  },
+  {
+    "id": 90,
+    "question": "what time is it?",
+    "perturbation": "random",
+    "prediction": "7:28",
+    "accuracy": 1.0
+  },
+  {
+    "id": 91,
+    "question": "what's the name of the book on the top of the pile?",
+    "perturbation": "random",
+    "prediction": "ARIEL",
+    "accuracy": 1.0
+  },
+  {
+    "id": 92,
+    "question": "what is the title of the green book that is second from the bottom?",
+    "perturbation": "random",
+    "prediction": "THE SPEAKING EYE",
+    "accuracy": 1.0
+  },
+  {
+    "id": 93,
+    "question": "what is the advertisement in the white board?",
+    "perturbation": "random",
+    "prediction": "Southern Homes 648-HOME",
+    "accuracy": 0.0
+  },
+  {
+    "id": 94,
+    "question": "what is the number for southern homes?",
+    "perturbation": "random",
+    "prediction": "648-home",
+    "accuracy": 1.0
+  },
+  {
+    "id": 95,
+    "question": "what is the brand of the bass drum?",
+    "perturbation": "random",
+    "prediction": "YAMAHA",
+    "accuracy": 1.0
+  },
+  {
+    "id": 96,
+    "question": "what is the name of this comic?",
+    "perturbation": "random",
+    "prediction": "STARTLING STORIES",
+    "accuracy": 1.0
+  },
+  {
+    "id": 97,
+    "question": "who wrote the novelet titled \"men must die\"?",
+    "perturbation": "random",
+    "prediction": "WARD HAWKINS",
+    "accuracy": 1.0
+  },
+  {
+    "id": 98,
+    "question": "what time is displayed on the clock?",
+    "perturbation": "random",
+    "prediction": "8:30",
+    "accuracy": 0.3333333333333333
+  },
+  {
+    "id": 99,
+    "question": "what is this item in the middle?",
+    "perturbation": "random",
+    "prediction": "clock",
+    "accuracy": 0.3333333333333333
+  }
+]

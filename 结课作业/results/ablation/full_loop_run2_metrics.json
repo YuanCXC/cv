@@ -1,0 +1,9 @@
+[
+  {
+    "experiment": "full_loop_run2",
+    "use_loop": true,
+    "use_clip": true,
+    "samples": 10,
+    "accuracy": 0.0
+  }
+]

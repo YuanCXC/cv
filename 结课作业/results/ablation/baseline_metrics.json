@@ -1,0 +1,9 @@
+[
+  {
+    "experiment": "baseline",
+    "use_loop": false,
+    "use_clip": false,
+    "samples": 100,
+    "accuracy": 0.8233333333333333
+  }
+]

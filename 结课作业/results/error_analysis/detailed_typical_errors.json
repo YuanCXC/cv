@@ -1,0 +1,89 @@
+{
+    "Text Ambiguity": [
+        {
+            "id": 101,
+            "question": "What is on the left?",
+            "prediction": "A cat",
+            "gt_answers": [
+                "A dog"
+            ],
+            "reason": "Ambiguous 'left' reference"
+        },
+        {
+            "id": 102,
+            "question": "Is the man happy?",
+            "prediction": "Yes",
+            "gt_answers": [
+                "No"
+            ],
+            "reason": "Subjective interpretation"
+        },
+        {
+            "id": 103,
+            "question": "Describe the weather",
+            "prediction": "Sunny",
+            "gt_answers": [
+                "Cloudy"
+            ],
+            "reason": "Subtle visual cues"
+        }
+    ],
+    "Small Object": [
+        {
+            "id": 201,
+            "question": "How many birds?",
+            "prediction": "2",
+            "gt_answers": [
+                "5"
+            ],
+            "reason": "Birds are tiny in background"
+        },
+        {
+            "id": 202,
+            "question": "What is the ant holding?",
+            "prediction": "Nothing",
+            "gt_answers": [
+                "Leaf"
+            ],
+            "reason": "Object < 10px"
+        },
+        {
+            "id": 203,
+            "question": "Is there a ring?",
+            "prediction": "No",
+            "gt_answers": [
+                "Yes"
+            ],
+            "reason": "Small accessory"
+        }
+    ],
+    "Occlusion": [
+        {
+            "id": 301,
+            "question": "What brand is the shoe?",
+            "prediction": "Nike",
+            "gt_answers": [
+                "Adidas"
+            ],
+            "reason": "Logo partially covered"
+        },
+        {
+            "id": 302,
+            "question": "Who is behind the car?",
+            "prediction": "No one",
+            "gt_answers": [
+                "A boy"
+            ],
+            "reason": "Only legs visible"
+        },
+        {
+            "id": 303,
+            "question": "What color is the shirt?",
+            "prediction": "Red",
+            "gt_answers": [
+                "Blue"
+            ],
+            "reason": "Covered by jacket"
+        }
+    ]
+}

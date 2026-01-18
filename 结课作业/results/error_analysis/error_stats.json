@@ -1,0 +1,8 @@
+[
+  {
+    "location_failure": 0.0,
+    "verification_rejection": 0.01,
+    "reasoning_failure": 0.24,
+    "correct": 0.75
+  }
+]

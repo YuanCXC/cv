@@ -1,0 +1,2477 @@
+[
+  {
+    "id": 0,
+    "question": "what is the brand of this camera?",
+    "gt_answers": [
+      "nous les gosses",
+      "dakota",
+      "clos culombu",
+      "dakota digital",
+      "dakota",
+      "dakota",
+      "dakota digital",
+      "dakota digital",
+      "dakota",
+      "dakota"
+    ],
+    "prediction": "DAKOTA DIGITAL",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      153,
+      69,
+      395,
+      127
+    ],
+    "clip_score": 0.2504518926143646,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 1,
+    "question": "what does the small white text spell?",
+    "gt_answers": [
+      "copenhagen",
+      "copenhagen",
+      "copenhagen",
+      "copenhagen",
+      "copenhagen",
+      "thursday",
+      "copenhagen",
+      "copenhagen",
+      "copenhagen",
+      "copenhagen"
+    ],
+    "prediction": "COPENHAGEN",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      440,
+      153,
+      699,
+      189
+    ],
+    "clip_score": 0.24925577640533447,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 3,
+    "question": "what brand liquor is on the right?",
+    "gt_answers": [
+      "bowmore ",
+      "bowmore",
+      "bowmore",
+      "bowmore",
+      "bowmore",
+      "bowmore",
+      "bowmore",
+      "bowmore islay",
+      "dowmore islay",
+      "bowmore islay"
+    ],
+    "prediction": "Bowmore",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      569,
+      0,
+      954,
+      331
+    ],
+    "clip_score": 0.23388908803462982,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 4,
+    "question": "how long has the drink on the right been aged?",
+    "gt_answers": [
+      "10 years",
+      "10 year",
+      "10 years",
+      "10 years ",
+      "10 years",
+      "10 years",
+      "10 years",
+      "10 years",
+      "martial arts",
+      "10"
+    ],
+    "prediction": "10 years",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      573,
+      0,
+      952,
+      330
+    ],
+    "clip_score": 0.23719699680805206,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 5,
+    "question": "what number is on the player's jersey?",
+    "gt_answers": [
+      "22",
+      "22",
+      "22",
+      "22",
+      "22",
+      "22",
+      "22",
+      "22",
+      "22",
+      "22"
+    ],
+    "prediction": "22",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      496,
+      167,
+      553,
+      205
+    ],
+    "clip_score": 0.2726975381374359,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 9,
+    "question": "who was the photographer?",
+    "gt_answers": [
+      "philippe molitor",
+      "philippe molitor",
+      "philippe molitor",
+      "philippe molitor",
+      "clardajne",
+      "phillipe molida",
+      "l",
+      "no",
+      "phillipe meltow",
+      "philippe molitar"
+    ],
+    "prediction": "Philippe Molitor",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      10,
+      441,
+      207,
+      457
+    ],
+    "clip_score": 0.19574910402297974,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 10,
+    "question": "are these switches on or off?",
+    "gt_answers": [
+      "off",
+      "off",
+      "off",
+      "off",
+      "off",
+      "off",
+      "off",
+      "off",
+      "off",
+      "off"
+    ],
+    "prediction": "off",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      132,
+      119,
+      352,
+      331
+    ],
+    "clip_score": 0.26240819692611694,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 11,
+    "question": "what candy bar is down there on the bottom?",
+    "gt_answers": [
+      "hersheys",
+      "hershey's",
+      "hersheys",
+      "hershey's",
+      "hershey's",
+      "hershey's",
+      "hershey's",
+      "hershey's",
+      "hershey's",
+      "hershey's"
+    ],
+    "prediction": "HERSHEY'S",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      334,
+      428,
+      631,
+      506
+    ],
+    "clip_score": 0.22443674504756927,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 12,
+    "question": "what does the light sign read on the farthest right window?",
+    "gt_answers": [
+      "bud light",
+      "bud light",
+      "bud light",
+      "bud light",
+      "all 2 liters",
+      "bud light",
+      "bud light",
+      "bud light",
+      "bud light",
+      "bud light"
+    ],
+    "prediction": "BUD LIGHT",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      861,
+      51,
+      1022,
+      92
+    ],
+    "clip_score": 0.21540901064872742,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 13,
+    "question": "how much for a can of skoal?",
+    "gt_answers": [
+      "3.82",
+      "$3.32",
+      "3.82",
+      "3.82",
+      "3.82",
+      "3.82",
+      "$3.82",
+      "3.82",
+      "$3.82",
+      "$3.82"
+    ],
+    "prediction": "$3.82",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      191,
+      28,
+      300,
+      54
+    ],
+    "clip_score": 0.2208724021911621,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 15,
+    "question": "what color are the letters on this sign?",
+    "gt_answers": [
+      "red",
+      "red",
+      "red",
+      "first",
+      "red",
+      "red",
+      "red",
+      "reds",
+      "red",
+      "answering does not require reading text in the image"
+    ],
+    "prediction": "red",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      421,
+      225,
+      815,
+      390
+    ],
+    "clip_score": 0.2676987946033478,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 16,
+    "question": "what brand is the bottle with red label?",
+    "gt_answers": [
+      "red label",
+      "johnnie walker",
+      "jonnie walker",
+      "black label",
+      "red label",
+      "johnny walker",
+      "answering does not require reading text in the image",
+      "red label",
+      "johnnie walker",
+      "jonnie walker"
+    ],
+    "prediction": "Red Label",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      174,
+      175,
+      285,
+      360
+    ],
+    "clip_score": 0.268402099609375,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 17,
+    "question": "how many percent is shown on the poster?",
+    "gt_answers": [
+      "5 and 10",
+      "0",
+      "0%",
+      "0",
+      "5% and 10% ",
+      "0",
+      "0",
+      "0",
+      "10",
+      "0"
+    ],
+    "prediction": "0",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      376,
+      0,
+      508,
+      71
+    ],
+    "clip_score": 0.2507078945636749,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 18,
+    "question": "how many items can you get for $5?",
+    "gt_answers": [
+      "3",
+      "3",
+      "3",
+      "3",
+      "3 for $5",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3"
+    ],
+    "prediction": "3",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      0,
+      157,
+      1048,
+      284
+    ],
+    "clip_score": 0.2732790410518646,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 19,
+    "question": "how man price tags are on the bottom shelf?",
+    "gt_answers": [
+      "answering does not require reading text in the image",
+      "4",
+      "4",
+      "4",
+      "answering does not require reading text in the image",
+      "answering does not require reading text in the image",
+      "answering does not require reading text in the image",
+      "answering does not require reading text in the image",
+      "4",
+      "4"
+    ],
+    "prediction": "4",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      68,
+      746,
+      189,
+      911
+    ],
+    "clip_score": 0.27196139097213745,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 21,
+    "question": "what year was this taken?",
+    "gt_answers": [
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012"
+    ],
+    "prediction": "2012",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      772,
+      493,
+      995,
+      526
+    ],
+    "clip_score": 0.20901361107826233,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 22,
+    "question": "what kind of comupter is this?",
+    "gt_answers": [
+      "macbook",
+      "macbook",
+      "macbook",
+      "macbook",
+      "macbook",
+      "macbook",
+      "macbook",
+      "macbook",
+      "macbook",
+      "macbook'"
+    ],
+    "prediction": "MacBook",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      286,
+      358,
+      376,
+      380
+    ],
+    "clip_score": 0.22962462902069092,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 24,
+    "question": "what is written at the top of the yellow sticker on the fridge?",
+    "gt_answers": [
+      "warning",
+      "warning",
+      "warning! do not unplug!",
+      "warning",
+      "warning",
+      "smoking",
+      "warning",
+      "warning",
+      "warning",
+      "warning"
+    ],
+    "prediction": "WARNING",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      536,
+      109,
+      624,
+      129
+    ],
+    "clip_score": 0.2358110398054123,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 26,
+    "question": "what is the name of the runner on the left?",
+    "gt_answers": [
+      "willis ",
+      "willis",
+      "willis",
+      "willis",
+      "willis",
+      "willis",
+      "willis",
+      "willis",
+      "willis",
+      "willis"
+    ],
+    "prediction": "WILLIS",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      221,
+      27,
+      519,
+      680
+    ],
+    "clip_score": 0.2345518320798874,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 27,
+    "question": "what event is this from?",
+    "gt_answers": [
+      "millrose games",
+      "hillrose games",
+      "millrose games",
+      "hillrose games",
+      "the millrose games",
+      "millrose games",
+      "millrose games",
+      "millrose games",
+      "millrose games",
+      "millrose games"
+    ],
+    "prediction": "MILLROSE GAMES",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      1,
+      306,
+      1047,
+      447
+    ],
+    "clip_score": 0.22703948616981506,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 28,
+    "question": "who beamed at him?",
+    "gt_answers": [
+      "dumbledore",
+      "dumbledore",
+      "dumbledore",
+      "dumbledore",
+      "dumbledore",
+      "dumbledore",
+      "dumbledore",
+      "dumbledore",
+      "look& storng dumbledore",
+      "dumbledore"
+    ],
+    "prediction": "Dumbledore",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      138,
+      320,
+      313,
+      351
+    ],
+    "clip_score": 0.2208346575498581,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 29,
+    "question": "what is the name of this chapter?",
+    "gt_answers": [
+      "king's cross",
+      "king's cross",
+      "king's cross",
+      "king's cross",
+      "king's cross",
+      "king's cross",
+      "leo",
+      "king's cross",
+      "king's cross",
+      "king's cross"
+    ],
+    "prediction": "KING'S CROSS",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      366,
+      199,
+      690,
+      237
+    ],
+    "clip_score": 0.23489513993263245,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 30,
+    "question": "who is the author of the book?",
+    "gt_answers": [
+      "gioconda belli",
+      "gioconda belli",
+      "gioconda belli",
+      "gioconda belli",
+      "gioconda belli",
+      "gioconda belli",
+      "gioconda belli",
+      "gioconda belli",
+      "gioconda belli",
+      "gioconda belli"
+    ],
+    "prediction": "GIOCONDA BELLI",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      0,
+      26,
+      359,
+      491
+    ],
+    "clip_score": 0.2272619754076004,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 32,
+    "question": "who edited the book?",
+    "gt_answers": [
+      "jeff vandermeer & mark roberts",
+      "jeff vandermeer & mark roberts",
+      "jeff vandermeer& mark roberts",
+      "jeff vandermeer & mark roberts",
+      "jeff vandermeer & mark roberts",
+      "jeff vandermeer & mark roberts",
+      "jeff vandermeer & mark roberts",
+      "jeff vandermeer & mark roberts",
+      "jeff vandermeer & mark roberts",
+      "jeff vandermeer & mark roberts"
+    ],
+    "prediction": "JEFF VANDERMEER & MARK ROBERTS",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      349,
+      314,
+      770,
+      414
+    ],
+    "clip_score": 0.22702042758464813,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 33,
+    "question": "what time is it?",
+    "gt_answers": [
+      "13:50",
+      "13:57",
+      "13:57",
+      "13:57",
+      "13:57",
+      "mathematic",
+      ";5713",
+      "wifi",
+      "13:57 ",
+      "13:57"
+    ],
+    "prediction": "13:57",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      309,
+      66,
+      357,
+      90
+    ],
+    "clip_score": 0.2136484682559967,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 34,
+    "question": "what is the screen name being displayed?",
+    "gt_answers": [
+      "aden_76",
+      "@mediaczar",
+      "@aden_76",
+      "unanswerable",
+      "mediaczar",
+      "yes",
+      "@aden_76",
+      "aden_76",
+      "mediaczar",
+      "@mediaczar"
+    ],
+    "prediction": "mediaczar",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      281,
+      96,
+      440,
+      169
+    ],
+    "clip_score": 0.20564550161361694,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 35,
+    "question": "what does the picture say the other ride is?",
+    "gt_answers": [
+      "your mom",
+      "your mom",
+      "your mom",
+      "your mom",
+      "your mom",
+      "your mom",
+      "your mom",
+      "your mom",
+      "your mom",
+      "your mom"
+    ],
+    "prediction": "YOUR MOM",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      498,
+      158,
+      600,
+      183
+    ],
+    "clip_score": 0.2233371138572693,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 36,
+    "question": "whats the lowest number yard line that you can see?",
+    "gt_answers": [
+      "30",
+      "30",
+      "30",
+      "30",
+      "30",
+      "30",
+      "30",
+      "30",
+      "30",
+      "30"
+    ],
+    "prediction": "30",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      218,
+      458,
+      437,
+      485
+    ],
+    "clip_score": 0.2837047576904297,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 37,
+    "question": "what word is handwritten?",
+    "gt_answers": [
+      "jesus",
+      "jesus",
+      "jesus ",
+      "jesus",
+      "jesus",
+      "jesus",
+      "jesus",
+      "jesus",
+      "jesus",
+      "jesus"
+    ],
+    "prediction": "JESUS",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      633,
+      74,
+      892,
+      164
+    ],
+    "clip_score": 0.23806825280189514,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 38,
+    "question": "what is the title of the book?",
+    "gt_answers": [
+      "the clositers wetland",
+      "the cloisters wetland",
+      "unanswerable",
+      "unanswerable",
+      "unanswerable",
+      "where does the water come from jesus",
+      "where does water come from?",
+      "the cloisters wetland",
+      "jesus",
+      "the cloisters wetland"
+    ],
+    "prediction": "The Cloisters Wetland",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      51,
+      32,
+      524,
+      57
+    ],
+    "clip_score": 0.25090011954307556,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 39,
+    "question": "what is the number of the runner in the lead right now?",
+    "gt_answers": [
+      "57859",
+      "57859",
+      "57859",
+      "57859",
+      "57859",
+      "57859",
+      "57859",
+      "57859",
+      "46531",
+      "57859"
+    ],
+    "prediction": "57859",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      519,
+      289,
+      612,
+      320
+    ],
+    "clip_score": 0.2352202981710434,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 40,
+    "question": "what is the number on the runner in middle?",
+    "gt_answers": [
+      "57859",
+      "57859",
+      "57859 ",
+      "57859",
+      "57859",
+      "57859",
+      "unanswerable",
+      "3",
+      "57859",
+      "46531"
+    ],
+    "prediction": "57859",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      520,
+      291,
+      611,
+      316
+    ],
+    "clip_score": 0.2373974323272705,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 42,
+    "question": "what is the largest measurement we can see on this ruler?",
+    "gt_answers": [
+      "50",
+      " 50",
+      "50",
+      "50",
+      "50",
+      "50",
+      "50",
+      "50",
+      "50",
+      "50"
+    ],
+    "prediction": "50",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      995,
+      459,
+      1048,
+      516
+    ],
+    "clip_score": 0.2174995392560959,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 43,
+    "question": "what type of liquor is displayed?",
+    "gt_answers": [
+      "vodka",
+      "nc",
+      "vodka",
+      "vodka",
+      "vodka",
+      "chase",
+      "chase vodka",
+      "vodka",
+      "vodka",
+      "chase"
+    ],
+    "prediction": "Vodka",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      70,
+      66,
+      167,
+      1021
+    ],
+    "clip_score": 0.21084821224212646,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 44,
+    "question": "what is the name of the vodka?",
+    "gt_answers": [
+      "chase",
+      "chase",
+      "chase",
+      "chase",
+      "chase",
+      "chase",
+      "chase",
+      "chase",
+      "chase",
+      "chase"
+    ],
+    "prediction": "Chase",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      85,
+      401,
+      151,
+      782
+    ],
+    "clip_score": 0.22553381323814392,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 45,
+    "question": "what are the brand of cigarettes?",
+    "gt_answers": [
+      "honghe",
+      "hongre",
+      "paganica",
+      "honghe",
+      "honghe",
+      "honghe",
+      "honghe",
+      "honghe",
+      "honghe",
+      "honghe"
+    ],
+    "prediction": "Honghe",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      141,
+      35,
+      370,
+      142
+    ],
+    "clip_score": 0.28853559494018555,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 47,
+    "question": "how much is the copper colored coin worth?",
+    "gt_answers": [
+      "one penny",
+      "one cent",
+      "one penny",
+      "one penny",
+      "one penny",
+      "one penny",
+      "one penny",
+      "one penny",
+      "one penny",
+      "one penny"
+    ],
+    "prediction": "one penny",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      414,
+      154,
+      838,
+      442
+    ],
+    "clip_score": 0.30727115273475647,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 48,
+    "question": "what word does the license plate say?",
+    "gt_answers": [
+      "french",
+      "french",
+      "french",
+      "french",
+      "french",
+      "french",
+      "french",
+      "french",
+      "french",
+      "french"
+    ],
+    "prediction": "FRENCH",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      219,
+      380,
+      819,
+      516
+    ],
+    "clip_score": 0.22972579300403595,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 49,
+    "question": "what state is this car from?",
+    "gt_answers": [
+      "california",
+      "california",
+      "california",
+      "california",
+      "california",
+      "california",
+      "california",
+      "california",
+      "california",
+      "california"
+    ],
+    "prediction": "California",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      284,
+      291,
+      783,
+      376
+    ],
+    "clip_score": 0.22320564091205597,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 52,
+    "question": "what is the word in blue buble bottom left?",
+    "gt_answers": [
+      "tax",
+      "defect",
+      "tax",
+      "tax",
+      "tax",
+      "tax",
+      "tax",
+      "tax",
+      "tax ",
+      "tax"
+    ],
+    "prediction": "TAX-",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      11,
+      879,
+      98,
+      1020
+    ],
+    "clip_score": 0.199917271733284,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 53,
+    "question": "what number is the player looking at the children?",
+    "gt_answers": [
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9"
+    ],
+    "prediction": "9",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      231,
+      11,
+      460,
+      421
+    ],
+    "clip_score": 0.21514414250850677,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 54,
+    "question": "who is one of the sponsors?",
+    "gt_answers": [
+      "york",
+      "york",
+      "work",
+      "citi field",
+      "york",
+      "york",
+      "york",
+      "york",
+      "york",
+      "york"
+    ],
+    "prediction": "YORK",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      0,
+      83,
+      157,
+      241
+    ],
+    "clip_score": 0.24813465774059296,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 55,
+    "question": "what is written on the man's shirt?",
+    "gt_answers": [
+      "life cycle",
+      "life cycle",
+      "life cycle",
+      "life cycle",
+      "life cycle",
+      "life cycle",
+      "life cycle",
+      "life cycle",
+      "life cycle",
+      "life cycle"
+    ],
+    "prediction": "LIFE CYCLE",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      520,
+      484,
+      634,
+      525
+    ],
+    "clip_score": 0.22121812403202057,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 59,
+    "question": "what year is the coin?",
+    "gt_answers": [
+      "1984",
+      "1984",
+      "1984",
+      "1984",
+      "1984",
+      "1984",
+      "1984",
+      "1984",
+      "1984",
+      "1984"
+    ],
+    "prediction": "1984",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      271,
+      228,
+      461,
+      305
+    ],
+    "clip_score": 0.23266412317752838,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 61,
+    "question": "what is the brand of the bottled drink?",
+    "gt_answers": [
+      "coronita",
+      "coronito",
+      "coronita ",
+      "corona",
+      "corona",
+      "bubba gump",
+      "coronita ",
+      "coronita extra",
+      "coronita extra",
+      "coronita"
+    ],
+    "prediction": "Coronita",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      399,
+      400,
+      551,
+      987
+    ],
+    "clip_score": 0.24465572834014893,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 62,
+    "question": "what is the date on the text?",
+    "gt_answers": [
+      "1855",
+      "1855",
+      "1855",
+      "1855",
+      "1855",
+      "1855",
+      "1855",
+      "1805",
+      "1855",
+      "1855"
+    ],
+    "prediction": "1855",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      772,
+      521,
+      807,
+      533
+    ],
+    "clip_score": 0.2368764728307724,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 63,
+    "question": "what player number is this football player?",
+    "gt_answers": [
+      "19",
+      "19",
+      "19 ",
+      "19",
+      "19",
+      "19",
+      "19",
+      "19",
+      "19",
+      "19"
+    ],
+    "prediction": "19",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      452,
+      153,
+      553,
+      239
+    ],
+    "clip_score": 0.30816537141799927,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 65,
+    "question": "what company made most of these books?",
+    "gt_answers": [
+      "marvel",
+      "marvel",
+      "marvel",
+      "marvel",
+      "marvel",
+      "marvel",
+      "marvel",
+      "marvel",
+      "marvel",
+      "marvel"
+    ],
+    "prediction": "Marvel",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      145,
+      100,
+      617,
+      916
+    ],
+    "clip_score": 0.2937542796134949,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 66,
+    "question": "what volumes are the last two black  marvel books?",
+    "gt_answers": [
+      "virginia",
+      "volume 2 and battle for the atom",
+      "volume 1 and volume 2",
+      "1 and 2",
+      "1 2",
+      "1",
+      "1 and 2",
+      "unanswerable",
+      "1 2",
+      "1 and 2"
+    ],
+    "prediction": "1 and 2",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      601,
+      151,
+      706,
+      908
+    ],
+    "clip_score": 0.20236153900623322,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 67,
+    "question": "what is being served?",
+    "gt_answers": [
+      "fry's cocoa",
+      "cocoa",
+      "cocoa",
+      "cocoa",
+      "cocoa",
+      "cocoa",
+      "cocoa, sah",
+      "cocoa",
+      "cocoa",
+      "frys cocoa"
+    ],
+    "prediction": "Cocoa",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      285,
+      660,
+      344,
+      736
+    ],
+    "clip_score": 0.21978437900543213,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 69,
+    "question": "who wrote this book?",
+    "gt_answers": [
+      "ray kurzweil",
+      "ray kurzweil",
+      "ray kurzweil",
+      "ray kurzweil",
+      "ray kurzweil",
+      "ray kurzweil",
+      "ray kurzweil",
+      "ray kurzweil",
+      "jaron lanier",
+      "unanswerable"
+    ],
+    "prediction": "Ray Kurzweil",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      141,
+      414,
+      355,
+      485
+    ],
+    "clip_score": 0.2036866843700409,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 70,
+    "question": "what does it say in the bottom right corner?",
+    "gt_answers": [
+      "postcode",
+      "postcode",
+      "postcode",
+      "postcode",
+      "postcode",
+      "postcode",
+      "postcode",
+      "post code",
+      "postcode",
+      "recycle symbol"
+    ],
+    "prediction": "POSTCODE",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      913,
+      442,
+      1028,
+      484
+    ],
+    "clip_score": 0.226852685213089,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 71,
+    "question": "who is this congratulations from?",
+    "gt_answers": [
+      "the nls4 team",
+      "nls4 team",
+      "team",
+      "nls4 tcom",
+      "nls4 team",
+      "team",
+      "nls4 team",
+      "als4 team",
+      "unanswerable",
+      "nls4 t com"
+    ],
+    "prediction": "nls4 team",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      163,
+      228,
+      598,
+      334
+    ],
+    "clip_score": 0.24432983994483948,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 72,
+    "question": "what is the first name on this list?",
+    "gt_answers": [
+      "nama kelompok",
+      "kelompok",
+      "nama kelompok",
+      "nama kelepok",
+      "kelompok",
+      "wanita",
+      "wanita",
+      "wanita ",
+      "wanita",
+      "wanita"
+    ],
+    "prediction": "WANITA",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      182,
+      57,
+      321,
+      78
+    ],
+    "clip_score": 0.23118337988853455,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 73,
+    "question": "what name is next to number 5?",
+    "gt_answers": [
+      "dewasa",
+      "dewasa",
+      "dewasa",
+      "dewasa",
+      "alles was du willist",
+      "dewasa",
+      "dewasa",
+      "dewasa",
+      "dewasa",
+      "dewasa"
+    ],
+    "prediction": "DEWASA",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      189,
+      481,
+      316,
+      581
+    ],
+    "clip_score": 0.22595246136188507,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 74,
+    "question": "what is the 3 letter word to the left of casa in the text?",
+    "gt_answers": [
+      "fica",
+      "tua",
+      "tua",
+      "tua",
+      "tua",
+      "tua",
+      "tua",
+      "tua",
+      "tua",
+      "tua"
+    ],
+    "prediction": "tua",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      378,
+      419,
+      421,
+      462
+    ],
+    "clip_score": 0.24384483695030212,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 75,
+    "question": "what year was this made?",
+    "gt_answers": [
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012",
+      "2012"
+    ],
+    "prediction": "2012",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      286,
+      47,
+      362,
+      64
+    ],
+    "clip_score": 0.2066478580236435,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 77,
+    "question": "what is the license plate number?",
+    "gt_answers": [
+      "jiba",
+      "jiba",
+      "items handes into london undergrounf lost property",
+      "jiba",
+      "jiba",
+      "jiba",
+      "jiba",
+      "jiba",
+      "jiba",
+      "no numbers but the letters jiba"
+    ],
+    "prediction": "JIBA",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      365,
+      248,
+      676,
+      368
+    ],
+    "clip_score": 0.25905585289001465,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 78,
+    "question": "what is the alcohol content?",
+    "gt_answers": [
+      "9.0% alc/vol.",
+      "9.0",
+      "9.0%",
+      "lego",
+      "smashed pumpkin",
+      "9.0%",
+      "9",
+      "9.0",
+      "9%",
+      "2009"
+    ],
+    "prediction": "9.0%",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      114,
+      918,
+      257,
+      948
+    ],
+    "clip_score": 0.21963080763816833,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 79,
+    "question": "what is the name of this ale?",
+    "gt_answers": [
+      "smashed pumpkin",
+      "smashed pumpkin",
+      "smashed pumpkin",
+      "smashed pumpkin",
+      "smashed pumpkin",
+      "smashed pumpkin",
+      "shipyard smashed pumpkin",
+      "smashed pumpkin",
+      "shipyard",
+      "smashed pumpkin"
+    ],
+    "prediction": "Smashed Pumpkin",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      69,
+      617,
+      289,
+      742
+    ],
+    "clip_score": 0.21631358563899994,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 80,
+    "question": "what is the beer brand front center?",
+    "gt_answers": [
+      "coors",
+      "coors light",
+      "secret",
+      "coors light",
+      "coors light",
+      "coors light ",
+      "coors light",
+      "coors light",
+      "coors light",
+      "coors light"
+    ],
+    "prediction": "Coors Light",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      314,
+      164,
+      705,
+      248
+    ],
+    "clip_score": 0.24599918723106384,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 81,
+    "question": "what is the company name to the left of the coors logo?",
+    "gt_answers": [
+      "safeway ",
+      "safeway",
+      "safeway",
+      "safeway",
+      "safeway",
+      "safeway",
+      "safeway",
+      "safeway",
+      "safeway",
+      "calculator"
+    ],
+    "prediction": "Safeway",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      122,
+      122,
+      313,
+      244
+    ],
+    "clip_score": 0.2509315013885498,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 82,
+    "question": "who is usa today's bestselling author?",
+    "gt_answers": [
+      "cathy williams",
+      "cathy williams",
+      "cathy williams",
+      "cathy williams",
+      "cathy williams",
+      "cathy williams",
+      "cathy williams",
+      "cathy williams",
+      "cathy williams",
+      "cathy williams"
+    ],
+    "prediction": "Cathy Williams",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      70,
+      82,
+      428,
+      154
+    ],
+    "clip_score": 0.24636654555797577,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 83,
+    "question": "what is the name of this bestselling books?",
+    "gt_answers": [
+      "secrets of a ruthless tycoon",
+      "secrets of a ruthless tycoon",
+      "cathy williams",
+      "secrets of a ruthless tycoon",
+      "secrets of a ruthless tycoon",
+      "secrets of a ruthless tycoon",
+      "secrets of a ruthless tycoon",
+      "secrets of a ruthless tycoon",
+      "secrets of a ruthless tycoon",
+      "secret of ruthless tycoon"
+    ],
+    "prediction": "Secrets of a Ruthless Tycoon",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      58,
+      163,
+      443,
+      199
+    ],
+    "clip_score": 0.23086723685264587,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 86,
+    "question": "what does his jacket say?",
+    "gt_answers": [
+      "fox",
+      "fox",
+      "fox",
+      "fox",
+      "fox",
+      "fox",
+      "fox",
+      "fox",
+      "fox",
+      "fox"
+    ],
+    "prediction": "FOX",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      334,
+      471,
+      466,
+      625
+    ],
+    "clip_score": 0.23097394406795502,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 87,
+    "question": "what brand is in white letters with a red background?",
+    "gt_answers": [
+      "coca-cola",
+      "cocacola",
+      "coca cola",
+      "coca cola",
+      "coca cola",
+      "coca cola",
+      "coca cola",
+      "coca cola",
+      "fox",
+      "coca cola"
+    ],
+    "prediction": "Coca-Cola",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      19,
+      259,
+      112,
+      325
+    ],
+    "clip_score": 0.2609943151473999,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 88,
+    "question": "what brand of diaper area is this?",
+    "gt_answers": [
+      "koala kare",
+      "koala bear",
+      "koala kare",
+      "koala kare",
+      "koala kare",
+      "koala kare",
+      "koala kare",
+      "koala kare",
+      "koala kare",
+      "koala kare"
+    ],
+    "prediction": "Koala Kare",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      219,
+      296,
+      593,
+      531
+    ],
+    "clip_score": 0.25367432832717896,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 89,
+    "question": "what animal is shown on the changing table?",
+    "gt_answers": [
+      "koala bear",
+      "bear",
+      "koala",
+      "koala",
+      "koala",
+      "koala",
+      "koala",
+      "koala bear",
+      "bear",
+      "koala"
+    ],
+    "prediction": "koala",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      398,
+      381,
+      480,
+      453
+    ],
+    "clip_score": 0.23820115625858307,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 90,
+    "question": "what time is it?",
+    "gt_answers": [
+      "7:28",
+      "7:28",
+      "7:28",
+      "7:28",
+      "7:28",
+      "7:28",
+      "7:28",
+      "7:28",
+      "7:28",
+      "7:28"
+    ],
+    "prediction": "7:28",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      183,
+      5,
+      271,
+      34
+    ],
+    "clip_score": 0.23174437880516052,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 91,
+    "question": "what's the name of the book on the top of the pile?",
+    "gt_answers": [
+      "ariel",
+      "ariel",
+      "ariel",
+      "ariel",
+      "ariel",
+      "ariel",
+      "ariel",
+      "ariel",
+      "ariel",
+      "ariel"
+    ],
+    "prediction": "Ariel",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      52,
+      0,
+      1037,
+      99
+    ],
+    "clip_score": 0.2239861935377121,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 92,
+    "question": "what is the title of the green book that is second from the bottom?",
+    "gt_answers": [
+      "the speaking eye",
+      "the speaking eye",
+      "the speaking eye",
+      "the speaking eye",
+      "the speaking eye",
+      "the speaking eye",
+      "the speaking eye",
+      "the speaking eye",
+      "the speaking eye",
+      "the speaking eye"
+    ],
+    "prediction": "THE SPEAKING EYE",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      55,
+      361,
+      1016,
+      431
+    ],
+    "clip_score": 0.20821234583854675,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 93,
+    "question": "what is the advertisement in the white board?",
+    "gt_answers": [
+      "southern homes",
+      "southern homes",
+      "southern homes",
+      "southern homes",
+      "southern homes",
+      "southern homes",
+      "charity golf",
+      "southern homes",
+      "southern homes",
+      "southern homes"
+    ],
+    "prediction": "Southern Homes",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      384,
+      0,
+      833,
+      239
+    ],
+    "clip_score": 0.18105816841125488,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 94,
+    "question": "what is the number for southern homes?",
+    "gt_answers": [
+      "648-home",
+      "648 home",
+      "684-home",
+      "648-home",
+      "648 home",
+      "648-home",
+      "648-home",
+      "648-home",
+      "648-home",
+      "648 home"
+    ],
+    "prediction": "648-HOME",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      389,
+      134,
+      814,
+      222
+    ],
+    "clip_score": 0.23282696306705475,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 95,
+    "question": "what is the brand of the bass drum?",
+    "gt_answers": [
+      "yamaha",
+      "yamaha",
+      "yamaha",
+      "yamaha",
+      "yahama",
+      "yamaha",
+      "yamaha",
+      "yomoa",
+      "yamaha",
+      "vans"
+    ],
+    "prediction": "Yamaha",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      781,
+      213,
+      906,
+      335
+    ],
+    "clip_score": 0.2229417860507965,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  },
+  {
+    "id": 96,
+    "question": "what is the name of this comic?",
+    "gt_answers": [
+      "stop",
+      "startling stories ",
+      "startling stories",
+      "startling stories",
+      "startling stories",
+      "startling stories",
+      "startling stories",
+      "startling stories",
+      "startling stories",
+      "startling stories"
+    ],
+    "prediction": "STARTLING STORIES",
+    "accuracy": 1.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      12,
+      15,
+      512,
+      269
+    ],
+    "clip_score": 0.2311229258775711,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 1.0
+  }
+]

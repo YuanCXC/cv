@@ -1,0 +1,35 @@
+[
+  {
+    "id": 84,
+    "question": "what is this food place selling?",
+    "gt_answers": [
+      "krainerwurst",
+      "burenwurst",
+      "krainerwurst and burenwurst",
+      "krainerwurst and burenwurst",
+      "krainerwurst, burenwurst",
+      "wurst",
+      "bratwurst",
+      "hotdogs",
+      "krainerwurst burenwurst",
+      "krainerwurst"
+    ],
+    "prediction": "Kraimerwurst, Burenwurst, Frankfurter, Debreter",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      18,
+      387,
+      959,
+      476
+    ],
+    "clip_score": 0.1803523153066635,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  }
+]

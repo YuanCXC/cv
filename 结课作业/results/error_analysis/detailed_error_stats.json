@@ -1,0 +1,9 @@
+{
+    "Reasoning Failure": 12,
+    "Text Ambiguity": 3,
+    "Small Object": 4,
+    "Occlusion": 2,
+    "Background Interference": 1,
+    "Text Reading": 2,
+    "Other": 1
+}

@@ -1,0 +1,602 @@
+[
+  {
+    "id": 0,
+    "prediction": "DAKOTA DIGITAL",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 1,
+    "prediction": "COPENHAGEN",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 2,
+    "prediction": "Sublimely Self-Righteous Ale",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 3,
+    "prediction": "Bowmore",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 4,
+    "prediction": "10 years",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 5,
+    "prediction": "22",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 6,
+    "prediction": "10:08:35",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 7,
+    "prediction": "Audemars Piguet",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 8,
+    "prediction": "Alex Ovens",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 9,
+    "prediction": "Philippe Molitor",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 10,
+    "prediction": "off",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 11,
+    "prediction": "HERSHEY'S",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 12,
+    "prediction": "BUD LIGHT",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 13,
+    "prediction": "$3.82",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 14,
+    "prediction": "是的",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 15,
+    "prediction": "red",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 16,
+    "prediction": "Red Label",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 17,
+    "prediction": "0",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 18,
+    "prediction": "3",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 19,
+    "prediction": "4",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 20,
+    "prediction": "YAMA",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 21,
+    "prediction": "2012",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 22,
+    "prediction": "MacBook",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 23,
+    "prediction": "Select Your Keyboard",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 24,
+    "prediction": "WARNING",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 25,
+    "prediction": "2014",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 26,
+    "prediction": "WILLIS",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 27,
+    "prediction": "MILLROSE GAMES",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 28,
+    "prediction": "Dumbledore",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 29,
+    "prediction": "KING'S CROSS",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 30,
+    "prediction": "Héctor Abad Faciolince",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 31,
+    "prediction": "是的",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 32,
+    "prediction": "JEFF VANDERMEER & MARK ROBERTS",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 33,
+    "prediction": "13:57",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 34,
+    "prediction": "mediaczar",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 35,
+    "prediction": "your mom",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 36,
+    "prediction": "30",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 37,
+    "prediction": "JESUS",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 38,
+    "prediction": "THE CLOISTERS WETLAND",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 39,
+    "prediction": "57859",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 40,
+    "prediction": "57859",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 41,
+    "prediction": "否",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 42,
+    "prediction": "50",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 43,
+    "prediction": "Vodka",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 44,
+    "prediction": "Chase",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 45,
+    "prediction": "Honghe",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 46,
+    "prediction": "1 penny",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 47,
+    "prediction": "1 penny",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 48,
+    "prediction": "FRENCH",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 49,
+    "prediction": "California",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 50,
+    "prediction": "19:00 hs",
+    "accuracy": 0.6666666666666666,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 51,
+    "prediction": "20 pounds",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 52,
+    "prediction": "TAX-",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 53,
+    "prediction": "9",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 54,
+    "prediction": "YORK",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 55,
+    "prediction": "LIFE CYCLE",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 56,
+    "prediction": "3",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 57,
+    "prediction": "Ryman Football League",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 58,
+    "prediction": "25 paise",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 59,
+    "prediction": "1984",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 60,
+    "prediction": "Coronita Extra",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 61,
+    "prediction": "Coronita",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 62,
+    "prediction": "1855",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 63,
+    "prediction": "19",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 64,
+    "prediction": "白色",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 65,
+    "prediction": "Marvel",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 66,
+    "prediction": "Volume 1 and Volume 2",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 67,
+    "prediction": "Cocoa",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 68,
+    "prediction": "Fry's Cocoa",
+    "accuracy": 0.6666666666666666,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 69,
+    "prediction": "Ray Kurzweil",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 70,
+    "prediction": "POSTCODE",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 71,
+    "prediction": "nls4 team",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 72,
+    "prediction": "WANITA",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 73,
+    "prediction": "DEWASA",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 74,
+    "prediction": "tua",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 75,
+    "prediction": "2012",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 76,
+    "prediction": "是",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 77,
+    "prediction": "JIBA",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 78,
+    "prediction": "9.0%",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 79,
+    "prediction": "Smashed Pumpkin",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 80,
+    "prediction": "Coors Light",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 81,
+    "prediction": "Safeway",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 82,
+    "prediction": "Cathy Williams",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 83,
+    "prediction": "Secrets of a Ruthless Tycoon",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 84,
+    "prediction": "Krainerwurst, Burenwurst, Frankfurter, Debrecener",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 85,
+    "prediction": "Krainewurst",
+    "accuracy": 0.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 86,
+    "prediction": "FOX",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 87,
+    "prediction": "Coca-Cola",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 88,
+    "prediction": "Koala Kare",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 89,
+    "prediction": "koala",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 90,
+    "prediction": "7:28",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 91,
+    "prediction": "Ariel",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 92,
+    "prediction": "THE SPEAKING EYE",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 93,
+    "prediction": "Southern Homes",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 94,
+    "prediction": "648-HOME",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 95,
+    "prediction": "Yamaha",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 96,
+    "prediction": "STARTLING STORIES",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 97,
+    "prediction": "WARD HAWKINS",
+    "accuracy": 1.0,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 98,
+    "prediction": "8:30",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop"
+  },
+  {
+    "id": 99,
+    "prediction": "clock",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop"
+  }
+]

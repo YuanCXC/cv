@@ -1,0 +1,141 @@
+[
+  {
+    "location_failure": [],
+    "verification_rejection": [
+      {
+        "id": 84,
+        "question": "what is this food place selling?",
+        "gt_answers": [
+          "krainerwurst",
+          "burenwurst",
+          "krainerwurst and burenwurst",
+          "krainerwurst and burenwurst",
+          "krainerwurst, burenwurst",
+          "wurst",
+          "bratwurst",
+          "hotdogs",
+          "krainerwurst burenwurst",
+          "krainerwurst"
+        ],
+        "prediction": "Kraimerwurst, Burenwurst, Frankfurter, Debreter",
+        "accuracy": 0.0,
+        "exp_config": "full_loop",
+        "bbox": [
+          18,
+          387,
+          959,
+          476
+        ],
+        "clip_score": 0.1803523153066635,
+        "stats": {
+          "iterations": [],
+          "sam_calls": 1,
+          "clip_calls": 1,
+          "qwen_calls": 2
+        },
+        "vqa_acc": 0.0
+      }
+    ],
+    "reasoning_failure": [
+      {
+        "id": 2,
+        "question": "what kind of beer is this?",
+        "gt_answers": [
+          "ale",
+          "sublimely self-righteous ale",
+          "stone",
+          "ale",
+          "self righteous",
+          "ale",
+          "ale",
+          "ale",
+          "ale",
+          "ale"
+        ],
+        "prediction": "sublimely self-righteous ale",
+        "accuracy": 0.3333333333333333,
+        "exp_config": "full_loop",
+        "bbox": [
+          223,
+          35,
+          894,
+          1013
+        ],
+        "clip_score": 0.2626552879810333,
+        "stats": {
+          "iterations": [],
+          "sam_calls": 1,
+          "clip_calls": 1,
+          "qwen_calls": 2
+        },
+        "vqa_acc": 0.3333333333333333
+      },
+      {
+        "id": 6,
+        "question": "what is the time?",
+        "gt_answers": [
+          "5:41",
+          "5:41",
+          "8:00",
+          "5:41",
+          "5:40",
+          "5:41",
+          "5:42",
+          "5:41",
+          "8:00",
+          "5:41"
+        ],
+        "prediction": "10:10:35",
+        "accuracy": 0.0,
+        "exp_config": "full_loop",
+        "bbox": [
+          535,
+          91,
+          860,
+          325
+        ],
+        "clip_score": 0.26424872875213623,
+        "stats": {
+          "iterations": [],
+          "sam_calls": 1,
+          "clip_calls": 1,
+          "qwen_calls": 2
+        },
+        "vqa_acc": 0.0
+      },
+      {
+        "id": 7,
+        "question": "what brand of watch is that?",
+        "gt_answers": [
+          "ap",
+          "unanswerable",
+          "unanswerable",
+          "ap",
+          "af",
+          "unanswerable",
+          "audemars",
+          "unanswerable",
+          "unanswerable",
+          "ap"
+        ],
+        "prediction": "Audemars Piguet",
+        "accuracy": 0.0,
+        "exp_config": "full_loop",
+        "bbox": [
+          155,
+          14,
+          959,
+          361
+        ],
+        "clip_score": 0.2381039410829544,
+        "stats": {
+          "iterations": [],
+          "sam_calls": 1,
+          "clip_calls": 1,
+          "qwen_calls": 2
+        },
+        "vqa_acc": 0.0
+      }
+    ]
+  }
+]

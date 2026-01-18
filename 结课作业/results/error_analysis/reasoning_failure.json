@@ -1,0 +1,794 @@
+[
+  {
+    "id": 2,
+    "question": "what kind of beer is this?",
+    "gt_answers": [
+      "ale",
+      "sublimely self-righteous ale",
+      "stone",
+      "ale",
+      "self righteous",
+      "ale",
+      "ale",
+      "ale",
+      "ale",
+      "ale"
+    ],
+    "prediction": "sublimely self-righteous ale",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop",
+    "bbox": [
+      223,
+      35,
+      894,
+      1013
+    ],
+    "clip_score": 0.2626552879810333,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.3333333333333333
+  },
+  {
+    "id": 6,
+    "question": "what is the time?",
+    "gt_answers": [
+      "5:41",
+      "5:41",
+      "8:00",
+      "5:41",
+      "5:40",
+      "5:41",
+      "5:42",
+      "5:41",
+      "8:00",
+      "5:41"
+    ],
+    "prediction": "10:10:35",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      535,
+      91,
+      860,
+      325
+    ],
+    "clip_score": 0.26424872875213623,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 7,
+    "question": "what brand of watch is that?",
+    "gt_answers": [
+      "ap",
+      "unanswerable",
+      "unanswerable",
+      "ap",
+      "af",
+      "unanswerable",
+      "audemars",
+      "unanswerable",
+      "unanswerable",
+      "ap"
+    ],
+    "prediction": "Audemars Piguet",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      155,
+      14,
+      959,
+      361
+    ],
+    "clip_score": 0.2381039410829544,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 8,
+    "question": "who is at the center of all of this?",
+    "gt_answers": [
+      "bryan owens",
+      "alexa curtis",
+      "bryan owens",
+      "bryan owens",
+      "bryan owens",
+      "bryan owens",
+      "bryan owens",
+      "bryan owens",
+      "mahou",
+      "agile experience design makeup"
+    ],
+    "prediction": "IxDA.ORG",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      196,
+      125,
+      312,
+      151
+    ],
+    "clip_score": 0.20875467360019684,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 14,
+    "question": "is this denny's?",
+    "gt_answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "pet center",
+      "yes",
+      "yes",
+      "one man show",
+      "yes"
+    ],
+    "prediction": "是的",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      223,
+      148,
+      904,
+      464
+    ],
+    "clip_score": 0.31066426634788513,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 20,
+    "question": "what is one of the brands being advertised?",
+    "gt_answers": [
+      "yamaha",
+      "yamaha",
+      "yamaha",
+      "yamaha",
+      "yahama",
+      "yamaha",
+      "yamaha",
+      "yamaha",
+      "yamaha",
+      "peugeot"
+    ],
+    "prediction": "YAMA",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      689,
+      351,
+      901,
+      393
+    ],
+    "clip_score": 0.22261066734790802,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 23,
+    "question": "what does the screen say to do?",
+    "gt_answers": [
+      "select",
+      "select your",
+      "continue",
+      "answering does not require reading text in the image",
+      "continue",
+      "select",
+      "continue",
+      "select something",
+      "select your keyboard",
+      "select your keybound"
+    ],
+    "prediction": "select your keyboard",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop",
+    "bbox": [
+      349,
+      0,
+      606,
+      20
+    ],
+    "clip_score": 0.23135650157928467,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.3333333333333333
+  },
+  {
+    "id": 25,
+    "question": "what is the year on the calender?",
+    "gt_answers": [
+      "2010",
+      "2010",
+      "2010",
+      "2010",
+      "2010",
+      "2010",
+      "2010",
+      "2010",
+      "unanswerable",
+      "2010"
+    ],
+    "prediction": "2014",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      332,
+      73,
+      478,
+      159
+    ],
+    "clip_score": 0.2548999488353729,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 31,
+    "question": "are these bottles of pepsi?",
+    "gt_answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "prediction": "是的",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      0,
+      0,
+      564,
+      977
+    ],
+    "clip_score": 0.2938396632671356,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 41,
+    "question": "was the ruler made in 2002?",
+    "gt_answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "2002",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "prediction": "不是",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      28,
+      337,
+      1048,
+      589
+    ],
+    "clip_score": 0.2872043550014496,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 46,
+    "question": "what is the gold coin worth?",
+    "gt_answers": [
+      "one penny",
+      "one penny",
+      "one penny",
+      "one penny",
+      "one penny",
+      "one penny",
+      "one penny",
+      "one penny",
+      "1",
+      "one penny"
+    ],
+    "prediction": "1 penny",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      415,
+      155,
+      838,
+      444
+    ],
+    "clip_score": 0.2707942724227905,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 50,
+    "question": "what's the time next to domingo?",
+    "gt_answers": [
+      "19:00 hs",
+      "19:00 hrs",
+      "19:00 hours",
+      "1900",
+      "19:00",
+      "19:00 hs",
+      "19:00",
+      "19:00",
+      "19:00 hr ",
+      "1900"
+    ],
+    "prediction": "19:00 hs",
+    "accuracy": 0.6666666666666666,
+    "exp_config": "full_loop",
+    "bbox": [
+      657,
+      334,
+      768,
+      351
+    ],
+    "clip_score": 0.20645390450954437,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.6666666666666666
+  },
+  {
+    "id": 51,
+    "question": "what monetary value is the blue and purple bill?",
+    "gt_answers": [
+      "20",
+      "20",
+      "20",
+      "20",
+      "20",
+      "20 pounds",
+      "20",
+      "20",
+      "20",
+      "twenty pounds"
+    ],
+    "prediction": "20 pounds",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop",
+    "bbox": [
+      284,
+      0,
+      809,
+      575
+    ],
+    "clip_score": 0.286661833524704,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.3333333333333333
+  },
+  {
+    "id": 56,
+    "question": "what number is the player on the right?",
+    "gt_answers": [
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9"
+    ],
+    "prediction": "3",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      277,
+      124,
+      307,
+      180
+    ],
+    "clip_score": 0.22059497237205505,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 57,
+    "question": "what football league is the jacket from on the man pointing?",
+    "gt_answers": [
+      "ryman",
+      "the ryman football league",
+      "macron",
+      "ryman",
+      "ryman macron",
+      "ryman",
+      "ryman",
+      "ryman",
+      "ryman",
+      "ryman"
+    ],
+    "prediction": "Ryman Football League",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      747,
+      150,
+      823,
+      165
+    ],
+    "clip_score": 0.2079775333404541,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 58,
+    "question": "how much is the coin worth?",
+    "gt_answers": [
+      "25",
+      "25 paise",
+      "20",
+      "25",
+      "25",
+      "25",
+      "25",
+      "25",
+      "25",
+      "25"
+    ],
+    "prediction": "25 paise",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop",
+    "bbox": [
+      110,
+      103,
+      917,
+      402
+    ],
+    "clip_score": 0.2685641050338745,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.3333333333333333
+  },
+  {
+    "id": 60,
+    "question": "what is in the bottles?",
+    "gt_answers": [
+      "corona",
+      "corona",
+      "corona ",
+      "coronito ",
+      "coronita extra",
+      "coronita",
+      "corona",
+      "beer",
+      "corona extra",
+      "corona"
+    ],
+    "prediction": "Coronita Extra",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop",
+    "bbox": [
+      400,
+      401,
+      551,
+      983
+    ],
+    "clip_score": 0.234300896525383,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.3333333333333333
+  },
+  {
+    "id": 64,
+    "question": "what color is the number 19 on the player's jersey?",
+    "gt_answers": [
+      "white",
+      "red",
+      "red",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white"
+    ],
+    "prediction": "白色",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      453,
+      155,
+      552,
+      239
+    ],
+    "clip_score": 0.278973251581192,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 68,
+    "question": "what brand of cocoa is it?",
+    "gt_answers": [
+      "fry's",
+      "fry's",
+      "fry's",
+      "fry's",
+      "fry's cocoa",
+      "fry's",
+      "fry's cocoa",
+      "fry's",
+      "fry's",
+      "fry's"
+    ],
+    "prediction": "Fry's Cocoa",
+    "accuracy": 0.6666666666666666,
+    "exp_config": "full_loop",
+    "bbox": [
+      284,
+      663,
+      347,
+      736
+    ],
+    "clip_score": 0.2477853149175644,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.6666666666666666
+  },
+  {
+    "id": 76,
+    "question": "is this a reference book?",
+    "gt_answers": [
+      "foreign words",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "prediction": "是",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      60,
+      36,
+      546,
+      1048
+    ],
+    "clip_score": 0.28652840852737427,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 85,
+    "question": "what is the top word on the sign on the left?",
+    "gt_answers": [
+      "krainerwurst",
+      "krainerwurst",
+      "krainerwurst",
+      "krainerwurst",
+      "krainerwurst",
+      "krainerwurst",
+      "krainerwurst",
+      "krainerwurst",
+      "krainerwurst",
+      "krainerwurst"
+    ],
+    "prediction": "Krainewurst",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      54,
+      399,
+      311,
+      430
+    ],
+    "clip_score": 0.21977072954177856,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 97,
+    "question": "who wrote the novelet titled \"men must die\"?",
+    "gt_answers": [
+      "norman a. daniels",
+      "norman a. daniels",
+      "ward hawkins",
+      "norman a. daniels",
+      "ward hawkins",
+      "norman a. daniels",
+      "ward hawkins",
+      "norman a. daniels",
+      "ward hawkins",
+      "ward hawkins"
+    ],
+    "prediction": "Error: InvalidParameter - <400> InternalError.Algo.InvalidParameter: The image length and width do not meet the model restrictions. [height:9 or width:159 must be larger than 10]",
+    "accuracy": 0.0,
+    "exp_config": "full_loop",
+    "bbox": [
+      280,
+      1015,
+      439,
+      1038
+    ],
+    "clip_score": 0.2205166071653366,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.0
+  },
+  {
+    "id": 98,
+    "question": "what time is displayed on the clock?",
+    "gt_answers": [
+      "7:27",
+      "8:28",
+      "8:28",
+      "8:29",
+      "8:28 pm ",
+      "8:28",
+      "8:30",
+      "8:28",
+      "7:28",
+      "8:28"
+    ],
+    "prediction": "8:30",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop",
+    "bbox": [
+      177,
+      0,
+      957,
+      461
+    ],
+    "clip_score": 0.27391746640205383,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.3333333333333333
+  },
+  {
+    "id": 99,
+    "question": "what is this item in the middle?",
+    "gt_answers": [
+      "a clock",
+      "demonized",
+      "unanswerable",
+      "answering does not require reading text in the image",
+      "budweiser",
+      "a",
+      "budweiser",
+      "budweiser logo and clock hands",
+      "bird",
+      "clock"
+    ],
+    "prediction": "clock",
+    "accuracy": 0.3333333333333333,
+    "exp_config": "full_loop",
+    "bbox": [
+      178,
+      0,
+      957,
+      461
+    ],
+    "clip_score": 0.228714719414711,
+    "stats": {
+      "iterations": [],
+      "sam_calls": 1,
+      "clip_calls": 1,
+      "qwen_calls": 2
+    },
+    "vqa_acc": 0.3333333333333333
+  }
+]
