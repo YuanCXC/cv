@@ -20,7 +20,7 @@ import os
 # 添加项目根目录到 sys.path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from ..core import config
+from core import config
 
 class QwenVLModel:
     def __init__(self):

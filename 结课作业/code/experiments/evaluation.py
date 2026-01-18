@@ -128,4 +128,4 @@ class BaselineEvaluator:
 if __name__ == "__main__":
     evaluator = BaselineEvaluator()
     # 默认跑所有数据，如果想快速测试可以 evaluator.run(limit=5)
-    evaluator.run(limit=100)
+    evaluator.run(limit=10)

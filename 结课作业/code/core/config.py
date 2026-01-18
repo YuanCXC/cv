@@ -17,16 +17,20 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 目录配置
 CODE_DIR = os.path.join(PROJECT_ROOT, "code")
-DATA_DIR = os.path.join(PROJECT_ROOT, "data")
-IMAGES_DIR = os.path.join(DATA_DIR, "images")
+
 RESULTS_DIR = os.path.join(PROJECT_ROOT, "results")
+
+
+DATA_DIR = os.path.join(os.path.dirname(PROJECT_ROOT), "data")
+
+IMAGES_DIR = os.path.join(DATA_DIR, "images")
 
 # 确保目录存在
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
 # 配置文件路径
 # .env 位于结课作业的上级目录
-ENV_PATH = os.path.join(os.path.dirname(PROJECT_ROOT), ".env")
+ENV_PATH = os.path.join(os.path.dirname(os.path.dirname(PROJECT_ROOT)), ".env")
 
 def load_api_key():
     """从.env文件加载API Key"""

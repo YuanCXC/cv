@@ -22,11 +22,11 @@ import os
 # 添加项目根目录到 sys.path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from ..core import config
-from ..core.utils import load_metadata, save_results
-from ..core.main_loop import VQAClosedLoopSystem
-from .evaluation import compute_vqa_accuracy
-from ..models.model_qwen import QwenVLModel
+from core import config
+from core.utils import load_metadata, save_results
+from core.main_loop import VQAClosedLoopSystem
+from evaluation import compute_vqa_accuracy
+from models.model_qwen import QwenVLModel
 
 class AblationRunner:
     def __init__(self):
